@@ -100,7 +100,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     botaoClubes.addEventListener("click", function () {
-        window.location.href = "../Clubes/Clubes.html"
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clubes.html";
+        window.location.href = url;
     })
 })
 
@@ -112,7 +113,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     botaoClubes.addEventListener("click", function () {
-        window.location.href = "../Jogadores do Mundo/JogadoresDoMundo.html"
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clubes.html";
+        window.location.href = url;
     })
 })
 
@@ -121,13 +123,15 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const botaoClubes = document.getElementById("id-linkClube1")
     botaoClubes.addEventListener("click", function () {
-        window.location.href = "Clube 1/Clube1.html"
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube1/Clube1.html";
+        window.location.href = url;
     })
 })
 document.addEventListener("DOMContentLoaded", function () {
     const botaoClubes = document.getElementById("id-linkClube2")
     botaoClubes.addEventListener("click", function () {
-        window.location.href = "Clube 2/Clube1.html"
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube2/Clube1.html";
+        window.location.href = url;
     })
 })
 document.addEventListener("DOMContentLoaded", function () {

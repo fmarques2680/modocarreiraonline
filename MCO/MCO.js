@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     botaoClubes.addEventListener("click", function () {
-        window.location.href = "../Clubes/Clubes.html"
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clubes.html";
+        window.location.href = url;
     })
 })
 
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     botaoClubes.addEventListener("click", function () {
-        window.location.href = "../Jogadores do Mundo/JogadoresDoMundo.html"
+        var url = "https://fmarques2680.github.io/modocarreiraonline/JogadoresDoMundo/JogadoresDoMundo.html";
+        window.location.href = url;
     })
 })

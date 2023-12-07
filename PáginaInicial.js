@@ -5,10 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Adicionar um ouvinte de evento para o clique no botão
     botaoEntrarEmUmUniverso.addEventListener("click", function() {
-        // URL para o qual você deseja redirecionar
         var url = "https://fmarques2680.github.io/modocarreiraonline/MCO/MCO.html";
-
-        // Realizar o redirecionamento
         window.location.href = url;
     });
 });
