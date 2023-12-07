@@ -1,11 +1,11 @@
 //BOTÃO ENTRAR EM UM UNIVERO
-//document.addEventListener("DOMContentLoaded", function () {
-//    const botaoEntrarEmUmUniverso = document.getElementById("id-botao-entrar-em-um-unviverso");
+document.addEventListener("DOMContentLoaded", function () {
+    const botaoEntrarEmUmUniverso = document.getElementById("id-botao-entrar-em-um-unviverso");
 
-//    botaoEntrarEmUmUniverso.addEventListener("click", function() {
-//    window.location.href = "MCO/MCO.html";
-//    });
-//});
+    botaoEntrarEmUmUniverso.addEventListener("click", function() {
+    window.location.href = "/MCO/MCO.html";
+    });
+});
 
 //BOTÃO CRIAR UM NOVO UNIVERSO
 //document.addEventListener("DOMContentLoaded", function () {
