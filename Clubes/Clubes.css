@@ -1,0 +1,231 @@
+/*BODY*/
+body {
+    width: 100vw;
+    margin: 0;
+
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+/*HEADER*/
+header {
+    display: flex;
+
+    background-color: black;
+
+    width: 100vw;
+    height: 4vw;
+
+    align-items: center;
+    justify-content: center;
+}
+
+    #id-logoMCO {
+        width: 8vw;
+    }
+
+
+
+/*MENU PRINCIPAL*/
+.class-MenuPrincipal {
+    display: flex;
+    flex-direction: row;
+
+    width: 100vw;
+
+    justify-content: space-between
+}
+
+    .class-botaoMenuPrincipal {
+        /*background-color: #dbdbdb;*/
+        background: linear-gradient(to top, #dbdbdb, hwb(0 55% 45%));
+
+        width: 100vw;
+        border: none;
+        border-left: 0.1vw solid;
+        border-right: 0.1vw solid;
+        border-bottom: 0.2vw solid;
+
+        align-items: center;
+        justify-content: center;
+
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.5vw;
+        text-align: center;
+
+        cursor: pointer;
+    }
+        .class-botaoMenuPrincipal:hover {
+            /*background-color: hsl(0, 0%, 71%);*/
+            background: linear-gradient(to top, #b9b9b9, rgb(97, 97, 97));
+        }
+
+        #id-botaoEmBreve {
+            font-style: italic;
+        }
+
+            #id-botaoClubes {
+                /*background-color: hsl(0, 0%, 71%);*/
+                background: linear-gradient(to top, #b9b9b9, rgb(97, 97, 97));
+            }
+
+
+
+/*BOTÕES DOS CLUBES*/
+/* Estilo para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff;
+    width: 30vw;
+    
+    margin: 20vw auto;
+    margin-top: 10vw;
+    padding: 3vw;
+    padding-top: 1.5vw;
+    border: 0.2vw solid #333;
+    border-radius: 1vw;
+    box-shadow: 0.1vw rgba(0, 0, 0, 0.5);
+
+    text-align: center;
+}
+
+
+
+/*CLUBES*/
+.class-modalEdiçaoClube {
+    display: flex;
+    display: none;
+
+    position: absolute;
+
+    left: 12vw;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 33vw;
+    padding-right: 1vw;
+}
+    .class-inputClube {
+        margin-right: 0.5vw;
+        width: 14vw;
+
+        font-family: 'Oswald', sans-serif;
+        text-align: center;
+    }
+
+    .class-botaoConfirmarClube {
+        border-radius: 0.5vw;
+        border: none;
+
+        font-family: 'Oswald', sans-serif;   
+
+        cursor: pointer;
+    }
+        .class-botaoConfirmarClube:hover {
+            background-color: #b9b9b9;
+        }
+
+.class-divClube {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin-top: 1.5vw;
+}
+
+
+    .class-espaçoClube {
+        display: flex;
+        flex-direction: row;
+
+        width: 30vw;
+
+        justify-content: center;
+        justify-content: space-between;
+    }
+
+        .class-botaoEditar {
+            background-color: white;
+
+            width: 5vw;
+
+            
+            margin-top: 0.5vw;
+            margin-bottom: 0.5vw;
+            border: none;
+            border-top: solid black 0.1vw;
+            border-bottom: solid black 0.1vw;
+
+            font-family: 'Oswald', sans-serif;
+            font-size: 1vw;
+
+            cursor: pointer;
+        }
+            .class-botaoEditar:hover {
+                background-color: rgb(237, 236, 236);
+            }
+
+        .class-clubeSelecionado {
+            display: flex;
+
+            align-items: center;
+
+            font-size: 1.5vw;
+        }
+
+        .class-linkClube {
+            background-color: white;
+            color: blue;
+
+            width: 5vw;
+            
+            border: none;
+            
+
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5vw;
+
+            cursor: pointer;
+        }
+            .class-linkClube:hover {
+                font-weight: 1000;
+            }
+
+        .class-input {
+            width: 20vw;
+
+            text-align: center;
+            font-size: 1.5vw;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        span {
+            font-size: 1.5vw;
+        }
+
+
+
+/*EDIÇÃO DE PARTICIPANTES*/

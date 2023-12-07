@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCO - Página do clube - Base</title>
+
+    <!--FONTES DE TEXTO-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+
+    <!--ARQUIVO CCS-->
+    <link rel="stylesheet" href="Base.css">
+
+</head>
+<body>
+
+    <!--HEADER-->
+    <header>
+        <img id="id-logoMCO" src="https://i.ibb.co/1v3Wqbh/m-Mre-LS-MCO-Novo2-removebg-preview.png" alt="Imagem não carregada.">
+    </header>
+
+    <!--MAIN-->
+    <main>
+
+        <!--MENU-->
+        <div class="class-MenuPrincipal">
+            <button class="class-botaoMenuPrincipal" id="id-botaoJogadoresMundo">Jogadores do Mundo</button>
+            <button class="class-botaoMenuPrincipal" id="id-botaoClubes">Clubes</button>
+            <button class="class-botaoMenuPrincipal" id="id-botaoEmBreve">(Em breve...)</button>
+        </div>
+
+        <!--NOME DO CLUBE-->
+        <div id="clubeInfo"></div>
+
+        <!--MENU DO CLUBE-->
+        <div class="class-menuClube">
+            <button class="class-botaoMenuClube" id="id-botaoElenco">Elenco</button>
+            <button class="class-botaoMenuClube" id="id-botaoEmBreve-2">Categoria de Base</button>
+        </div>
+
+        <!--CONTEÚDO DA BASE-->
+        <div>
+            <button class="class-botaoPadrao" id="id-botaoPromoverJogador">Promover jogador da categoria de base</button>
+        </div>
+
+            <!--MODAL DE PROMOVER JOGADOR-->
+            <div class="class-modalBase" id="id-modalPromoçaoJogador">
+                <div>
+                    <div class="class-tituloDescriçao">
+                        <div>
+                            <p id="id-tituloModal">Jogador da base promovido</p>
+                        </div>
+                        <div>
+                            <p id="id-descriçaoModal">
+                                Nesse momento, você pagará pelo investimento feito na categoria de base. 
+                                Por conta do seu investimento, um dos jogadores de maior destaque da categoria de base,
+                                 de acordo com as especificações da sua equipe de scout, está sendo promovido ao elenco profissional.<br><br>
+                                Abaixo, preencha todas as informações referentes a esse jogador.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="class-partesModal" id="id-investimento">
+                        <p class="descriçao">Idade do jogador:</p>
+                        <div id="div-infoIdade" class="infoInfo"></div>
+
+                        <div class="divDireita">
+                            <select name="name-selectIdade" id="id-selectIdade" class="selectInput">
+                                <option value="Valor indefinido"></option>
+                                <option value="16">16 anos</option>
+                                <option value="17">17 anos</option>
+                                <option value="18">18 anos</option>
+                                <option value="19">19 anos</option>
+                                <option value="20">20 anos</option>
+                                <option value="21">21 anos</option>
+                                <option value="22">22 anos</option>
+                                <option value="23">23 anos</option>
+                            </select>
+                            <button class="confirmButton" id="CBIdade">Confirmar</button>
+                        </div>
+                    </div>
+                
+                    <div class="class-partesModal">
+                        <p class="descriçao">Investimento feito na base:</p>
+                        <div id="div-infoInvestimento" class="infoInfo"></div>
+
+                        <div class="divDireita">
+                            <input type="text" id="selectInvestimento" placeholder="Valor do investimento em €" class="selectInput">
+                            <button class="confirmButton" id="CBInvestimento">Confirmar</button>
+                        </div>
+                    </div>
+
+                    <div class="class-partesModal">
+                        <p class="descriçao">Posição:</p>
+                        <div id="div-infoPosiçao" class="infoInfo"></div>
+
+                        <div class="divDireita">
+                            <select name="name-selectPosiçao" id="id-selectPosiçao" class="selectInput">
+                                <option value="Valor indefinido"></option>
+                                <option value="GK">GK</option>
+                                <option value="CB">CB</option>
+                                <option value="RB">RB</option>
+                                <option value="RWB">RWB</option>
+                                <option value="LB">LB</option>
+                                <option value="LWB">LWB</option>
+                                <option value="CDM">CDM</option>
+                                <option value="CM">CM</option>
+                                <option value="RM">RM</option>
+                                <option value="LM">LM</option>
+                                <option value="CAM">CAM</option>
+                                <option value="CF">CF</option>
+                                <option value="RW">RW</option>
+                                <option value="LW">LW</option>
+                                <option value="ST">ST</option>
+                            </select>
+                            <button class="confirmButton" id="CBPosiçao">Confirmar</button>
+                        </div>
+                    </div>
+
+                    <div class="class-partesModal">
+                        <p class="descriçao">Nome completo:</p>
+                        <div id="div-infoNome" class="infoInfo"></div>
+
+                        <div class="divDireita">
+                            <input type="text" placeholder="Nome completo" class="selectInput" id="inputNome">
+                            <button class="confirmButton" id="CBNome">Confirmar</button>
+                        </div>
+                    </div>
+
+                    <div class="class-partesModal">
+                        <p class="descriçao">Nome conhecido:</p>
+                        <div id="div-infoNomeConhecido" class="infoInfo"></div>
+
+                        <div class="divDireita">
+                            <input type="text" placeholder="Nome conhecido" class="selectInput" id="inputNomeConhecido">
+                            <button class="confirmButton" id="CBNomeConhecido">Confirmar</button>
+                        </div>
+                    </div>
+
+                    <div class="class-partesModal" id="parteNacionalidade">
+                        <p class="descriçao" id="descriçaoNacionalidade">Nacionalidade:</p>
+                        <div id="div-infoNacionalide" class="infoInfo"></div>
+
+                        
+                            <div class="divDireita" id="divPaisConfirmar">
+                                <input type="text" placeholder="País" class="selectInput" id="inputNacionalidade">
+                                <button class="confirmButton" id="CBNacionalidade">Confirmar</button>
+                            </div>
+                            
+                        
+                    </div>
+                    
+                    <div class="divSugestoes">
+                            <div id="suggestions"></div>
+                    </div>
+                    <div class="class-partesModal" id="parteAltura">
+                        <p class="descriçao">Altura:</p>
+                        <div id="div-infoAltura" class="infoInfo"></div>
+
+                        <div class="divDireita">
+                            <input type="text" placeholder="Altura em cm" class="selectInput" id="inputAltura">
+                            <button class="confirmButton" id="CBAltura">Confirmar</button>
+                        </div>
+                    </div>
+
+                    <div class="class-partesModal">
+                        <p class="descriçao">Peso:</p>
+                        <div id="div-infoPeso" class="infoInfo"></div>
+
+                        <div class="divDireita">
+                            <input type="text" placeholder="Peso em kg" class="selectInput" id="inputPeso">
+                            <button class="confirmButton" id="CBPeso">Confirmar</button>
+                        </div>
+                    </div>
+
+                    <div class="class-partesModal">
+                        <p class="descriçao">Característica principal:</p>
+                        <div id="div-infoCaracteristicaPrincipal" class="infoInfo"></div>
+
+                        <div class="divDireita">
+                            <select name="name-selectCP" id="id-selectCP" class="selectInput">
+                                <option value="Valor indefinido"></option>
+                                <option value="Elasticidade (GOL)">Elasticidade (GOL)</option>
+                                <option value="Manejo (GOL)">Manejo (GOL)</option>
+                                <option value="Chute (GOL)">Chute (GOL)</option>
+                                <option value="Reflexos (GOL)">Reflexos (GOL)</option>
+                                <option value="Posicionamento (GOL)">Posicionamento (GOL)</option>
+                                <option value="Pace">Pace</option>
+                                <option value="Perna Ruim">Perna Ruim</option>
+                                <option value="Posicionamento de Ataque">Posicionamento de Ataque</option>
+                                <option value="Finalização">Finalização</option>
+                                <option value="Força do Chute">Força do Chute</option>
+                                <option value="Chute de Longe">Chute de Longe</option>
+                                <option value="Voleios">Voleios</option>
+                                <option value="Pênaltis">Pênaltis</option>
+                                <option value="Visão">Visão</option>
+                                <option value="Cruzamento">Cruzamento</option>
+                                <option value="Cobrança de falta">Cobrança de falta</option>
+                                <option value="Passe curto">Passe curto</option>
+                                <option value="Passe longo">Passe longo</option>
+                                <option value="Curva">Curva</option>
+                                <option value="Agilidade">Agilidade</option>
+                                <option value="Equilíbrio">Equilíbrio</option>
+                                <option value="Reações">Reações</option>
+                                <option value="Controle de bola">Controle de bola</option>
+                                <option value="Condução">Condução</option>
+                                <option value="Interceptações">Interceptações</option>
+                                <option value="Cabeceio">Cabeceio</option>
+                                <option value="Carrinho">Carrinho</option>
+                                <option value="Dividida em Pé">Dividida em Pé</option>
+                                <option value="Impulsão">Impulsão</option>
+                                <option value="Fôlego">Fôlego</option>
+                                <option value="Força">Força</option>
+                                <option value="Combatividade">Combatividade</option>
+                            </select>
+                            <button class="confirmButton" id="CBCP">Confirmar</button>
+                        </div>
+                    </div>
+
+                    <div class="class-partesModal">
+                        <p class="descriçao">Característica secundária:</p>
+                        <div id="div-infoCaracteristicaSecundaria" class="infoInfo"></div>
+
+                        <div class="divDireita">
+                            <select name="name-selectCS" id="id-selectCS" class="selectInput">
+                                <option value="Valor indefinido"></option>
+                                <option value="Elasticidade (GOL)">Elasticidade (GOL)</option>
+                                <option value="Manejo (GOL)">Manejo (GOL)</option>
+                                <option value="Chute (GOL)">Chute (GOL)</option>
+                                <option value="Reflexos (GOL)">Reflexos (GOL)</option>
+                                <option value="Posicionamento (GOL)">Posicionamento (GOL)</option>
+                                <option value="Pace">Pace</option>
+                                <option value="Perna Ruim">Perna Ruim</option>
+                                <option value="Posicionamento de Ataque">Posicionamento de Ataque</option>
+                                <option value="Finalização">Finalização</option>
+                                <option value="Força do Chute">Força do Chute</option>
+                                <option value="Chute de Longe">Chute de Longe</option>
+                                <option value="Voleios">Voleios</option>
+                                <option value="Pênaltis">Pênaltis</option>
+                                <option value="Visão">Visão</option>
+                                <option value="Cruzamento">Cruzamento</option>
+                                <option value="Cobrança de falta">Cobrança de falta</option>
+                                <option value="Passe curto">Passe curto</option>
+                                <option value="Passe longo">Passe longo</option>
+                                <option value="Curva">Curva</option>
+                                <option value="Agilidade">Agilidade</option>
+                                <option value="Equilíbrio">Equilíbrio</option>
+                                <option value="Reações">Reações</option>
+                                <option value="Controle de bola">Controle de bola</option>
+                                <option value="Condução">Condução</option>
+                                <option value="Interceptações">Interceptações</option>
+                                <option value="Cabeceio">Cabeceio</option>
+                                <option value="Carrinho">Carrinho</option>
+                                <option value="Dividida em Pé">Dividida em Pé</option>
+                                <option value="Impulsão">Impulsão</option>
+                                <option value="Fôlego">Fôlego</option>
+                                <option value="Força">Força</option>
+                                <option value="Combatividade">Combatividade</option>
+                            </select>
+                            <button class="confirmButton" id="CBCS">Confirmar</button>
+                        </div>
+                    </div>
+
+                    <div>
+
+                    </div>
+                
+
+                </div>
+                <div class="class-botaoConfirmarModal">
+                    <button id="botaoConfirmarModal">Confirmar dados</button>
+                </div>
+            </div>
+
+
+
+            
+
+
+
+            <!--MODAL DE JOGADOR PROMOVIDO-->
+            <div class="class-modalBase2" id="modalBase2" style="display: none;">
+                <div>
+                    <div class="class-tituloDescriçao">
+                        <div>
+                            <p id="id-tituloModal">Jogador da base promovido</p>
+                        </div>
+                        <div>
+                            <p id="id-descriçaoModal2">
+                                Um dos jogadores de maior destaque da sua categoria de base foi promovido ao elenco profissional!<br><br>
+                                Esteja ciente dos seus gastos em investimento da categoria de base e dê uma olhada no seu novo jogador!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="class-partesModal" id="id-investimentoF">
+                        <p class="descriçao2">Total investido na categoria de base:</p>
+                        <div id="div-infoInvestimentoF" class="infoInfo2"></div>
+                    </div>
+
+                    <div>
+                        <p id="id-tituloModal2">Informações do jogador</p>
+                    </div>
+                    
+                    <div class="class-partesModal" id="id-nomeF">
+                        <p class="descriçao2">Nome completo:</p>
+                        <div id="div-infoNomeF" class="infoInfo2"></div>
+                    </div>
+
+                    <div class="class-partesModal" id="id-nomeConhecidoF">
+                        <p class="descriçao2">Nome conhecido:</p>
+                        <div id="div-infoNomeConhecidoF" class="infoInfo2"></div>
+                    </div>
+
+                    <div class="class-partesModal" id="id-IdadeF">
+                        <p class="descriçao2">Idade:</p>
+                        <div id="div-infoIdadeF" class="infoInfo2"></div>
+                    </div>
+
+                    <div class="class-partesModal" id="id-NacionalidadeF">
+                        <p class="descriçao2">Nacionalidade:</p>
+                        <div id="div-infoNacionalidadeF" class="infoInfo2"></div>
+                    </div>
+
+                    <div class="class-partesModal" id="id-AlturaF">
+                        <p class="descriçao2">Altura:</p>
+                        <div id="div-infoAlturaF" class="infoInfo2"></div>
+                    </div>
+
+                    <div class="class-partesModal" id="id-PesoF">
+                        <p class="descriçao2">Peso:</p>
+                        <div id="div-infoPesoF" class="infoInfo2"></div>
+                    </div>
+
+                    <div class="class-partesModal" id="id-OVRF">
+                        <p class="descriçao2">OVR:</p>
+                        <div id="div-infoOVRF" class="infoInfo2"></div>
+                    </div>
+
+                    <div class="class-partesModal" id="id-PosiçaoF">
+                        <p class="descriçao2">Posição:</p>
+                        <div id="div-infoPosiçaoF" class="infoInfo2"></div>
+                    </div>
+
+                    <div class="class-partesModal" id="id-pernaRuimF">
+                        <p class="descriçao2">Perna ruim:</p>
+                        <div id="div-infoPernaRuimF" class="infoInfo2"></div>
+                    </div>
+
+                    <div class="class-partesModal" id="id-paceF">
+                        <p class="descriçao2">Pace:</p>
+                        <div id="div-infoPaceF" class="infoInfo2"></div>
+                    </div>
+
+                    <div class="class-partesModal" id="id-CPF">
+                        <p class="descriçao2">Característica principal:</p>
+                        <div id="div-CPF" class="infoInfo2"></div>
+                    </div>
+
+                    <div class="class-partesModal" id="id-CSF">
+                        <p class="descriçao2">Característica secundária:</p>
+                        <div id="div-CSF" class="infoInfo2"></div>
+                    </div>
+
+                    <div class="class-partesModal" id="id-demaisC">
+                        <p class="descriçao2">Demais atributos:</p>
+                        <div id="div-conjuntoDiv-demaisC" class="infoInfo2">
+                            <div id="div-demaisC" class="infoInfo3"></div>
+                            <div id="div-demaisC2" class="infoInfo3"></div>
+                            <div id="div-demaisC3" class="infoInfo3"></div>
+                            <div id="div-demaisC4" class="infoInfo3"></div>
+                            <div id="div-demaisC5" class="infoInfo3"></div>
+                            <div id="div-demaisC6" class="infoInfo3"></div>
+                            <div id="div-demaisC7" class="infoInfo3"></div>
+                        </div>
+                    </div>
+
+                    <div class="class-botaoConfirmarModal">
+                        <button class="botaoConfirmarModal" id="id-botaoFecharTudo">OK</button>
+                    </div>
+
+                </div>
+
+            </div>
+            
+
+    </main>
+
+    <script src="Base.js"></script>
+</body>

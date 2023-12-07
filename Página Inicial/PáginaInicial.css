@@ -1,0 +1,108 @@
+/*BODY DA PÁGINA INICIAL*/
+body {
+    display: flex;
+
+    background-color: black;
+    color: white;
+
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Oswald', sans-serif;
+}
+
+
+    /*CLASS DO CONTEÚDO DA PÁGINA INICIAL*/
+    .class-conteudo-pagina-inicial {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        width:75%;
+    }
+
+        /*LOGO DO MCO*/
+        #id-logo-mco {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            opacity: 0;
+            padding-top: 5%;
+            width: 40%;
+            height: auto;
+            
+            animation: fadeIn 3s ease-in forwards;
+            animation-delay: 0.5s;
+        }
+            @keyframes fadeIn {
+             to {
+               opacity: 1;
+             }
+            }
+
+        /*BOTÕES DA PÁGINA INICIAL*/
+        #id-conjunto-botoes-pagina-inicial {
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            transform: translateY(2rem);
+
+            opacity: 0;
+            padding-top: 1vw;
+            padding-bottom: 4vw;
+            
+            animation: fadeInUp 2s ease-in-out forwards;
+            animation-delay: 2s;
+        }
+            @keyframes fadeInUp {
+             to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+          }
+
+            .class-botoes-da-pagina-inicial {
+                display: flex;
+
+                background-color: black;
+                color: white;
+
+                justify-content: center;
+
+                border-top: 0.1em solid;
+                border-left: none;
+                border-right: none;
+                padding-top: 1em;
+                padding-left: 2em;
+                padding-right: 2em;
+                padding-bottom: 1em;
+                width: 100%;
+                
+                cursor: pointer;
+
+                font-size: 1.5vw;
+                font-family: 'Oswald', sans-serif;
+            }
+                .class-botoes-da-pagina-inicial:hover {
+                    background-color: hwb(0 9% 91%);
+                }
+
+                #id-botao-ajuda-e-informaçoes {
+                    border-bottom: 0.1em solid;
+                }
+
+
+        #id-versaoMCO {
+            opacity: 0;
+
+            font-size: 0.9vw;
+
+            animation: fadeInUp 2s ease-in-out forwards;
+            animation-delay: 3s;
+        }
+        

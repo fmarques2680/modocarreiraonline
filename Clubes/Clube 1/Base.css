@@ -1,0 +1,503 @@
+.root {
+    --primary-color: #000000;
+    --light-primary: #72706E;
+    --lightest-color: #FFFFFF;
+    --secondary-color: #132c6e;
+    --light-secondary: #318ED5;
+
+    /*TONS DE VERDE*/
+    --darkest-green: #1F8F00;
+    --less-dark-green: #28B800;
+    --normal-green: #31E000;
+    --lighter-green: #3FFF0A;
+    --lightest-green: #5FFF33;
+
+    /*TONS DE VERMLHO*/
+    --red1: #8d0101;
+    --red2: #B60202;
+    --red3: #de0202;
+    --red4: #f90202;
+    --red5: #fd3535;
+}
+
+
+
+/*BODY*/
+body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+/*HEADER*/
+header {
+    display: flex;
+
+    background-color: black;
+
+    width: 100%;
+    max-width: 100vw;
+    height: 4vw;
+
+    align-items: center;
+    justify-content: center;
+}
+
+    #id-logoMCO {
+        width: 8vw;
+    }
+
+
+
+/*MAIN*/
+main {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 100vw;
+}
+
+
+
+/*MENU PRINCIPAL*/
+.class-MenuPrincipal {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    max-width: 100vw;
+
+    justify-content: space-between
+}
+
+    .class-botaoMenuPrincipal {
+        /*background-color: #dbdbdb;*/
+        background: linear-gradient(to top, #dbdbdb, hwb(0 55% 45%));
+
+        width: 100%;
+        border: none;
+        border-left: 0.1vw solid;
+        border-right: 0.1vw solid;
+        border-bottom: 0.2vw solid;
+
+        align-items: center;
+        justify-content: center;
+
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.5vw;
+        text-align: center;
+
+        cursor: pointer;
+    }
+        .class-botaoMenuPrincipal:hover {
+            /*background-color: hsl(0, 0%, 71%);*/
+            background: linear-gradient(to top, #b9b9b9, rgb(97, 97, 97));
+        }
+
+        #id-botaoEmBreve {
+            font-style: italic;
+        }
+
+            #id-botaoClubes {
+                /*background-color: hsl(0, 0%, 71%);*/
+                background: linear-gradient(to top, #b9b9b9, rgb(97, 97, 97));
+            }
+
+
+
+/*CONTEÚDO DA PÁGINA*/
+/*NOME DO CLUBE*/
+#clubeInfo {
+    text-align: center;
+    font-size: 5vw;
+}
+
+
+
+/*MENU DO CLUBE*/
+.class-menuClube {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 0.5vw;
+    width: 100%;
+
+    justify-content: space-between
+}
+
+    .class-botaoMenuClube {
+        /*background-color: #dbdbdb;*/
+
+        width: 100%;
+        border: 0.1vw solid;
+        border-bottom: 0.2vw solid;
+
+        align-items: center;
+        justify-content: center;
+
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.5vw;
+        text-align: center;
+
+        cursor: pointer;
+    }
+        .class-botaoMenuClube:hover {
+            background-color: #dbdbdb
+        }
+
+        #id-botaoEmBreve-2 {
+            border-bottom: 0.2vw solid blue;
+        }
+
+            
+
+/*BASE*/
+.class-botaoPadrao {
+    background: linear-gradient(to right, #219301, #33c40b);
+
+    width: 30vw;
+    border-radius: 0.8vw;
+    border: solid 0.1vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+
+    font-size: 1.7vw;
+    font-family: 'Oswald', sans-serif;
+
+    cursor: pointer;
+}
+    .class-botaoPadrao:hover {
+        background: linear-gradient(to right, #2bb405, #3cdf0f);
+    }
+
+
+
+.class-modalBase {
+    
+
+    background: linear-gradient(to right, hwb(0 82% 18%), hwb(0 90% 10%));
+
+    width: 70VW;
+    padding: 1.5vw;
+    border-radius: 2vw;
+    margin-bottom: 2vw;
+
+    opacity: 0;
+}
+.class-modalBase.visible {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+    border-radius: 2vw;
+    border: 0;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.class-modalBase2 {
+    
+
+    background: linear-gradient(to right, hwb(0 82% 18%), hwb(0 90% 10%));
+
+    width: 70VW;
+    padding: 1.5vw;
+    border-radius: 2vw;
+    margin-bottom: 2vw;
+}
+
+
+
+    .class-tituloDescriçao {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 1vw;
+
+        text-align: center;
+    }
+
+        #id-tituloModal {
+            justify-content: center;
+            text-align: center;
+
+            margin: 0;
+
+            font-weight: bold;
+            font-size: 2vw;
+        }
+
+        #id-tituloModal2 {
+            justify-content: center;
+            text-align: center;
+
+            margin: 0;
+            margin-top: 2vw;
+
+            font-weight: bold;
+            font-size: 2vw;
+        }
+
+        #id-descriçaoModal {
+            justify-content: center;
+            text-align: center;
+
+            width: 45vw;
+            margin: 1vw;
+
+            font-size: 1.3vw;
+        }
+        
+        #id-descriçaoModal2 {
+            background: linear-gradient(to bottom, #31E000, #1F8F00);;
+
+            justify-content: center;
+            text-align: center;
+
+            width: 50vw;
+            margin: 1vw;
+            padding: 1vw;
+            border-radius: 1vw;
+
+            font-size: 1.3vw;
+        }
+
+    .class-partesModal {
+        display: flex;
+        flex-direction: row;
+
+        background: linear-gradient(to left, hwb(0 82% 18%), hwb(0 50% 50%));
+
+        width: 100%;
+        justify-content: space-between;
+        margin: 0.5vw;
+        border-radius: 0.5vw;
+
+        font-size: 1.5vw;
+    }
+
+            .descriçao {
+                align-items: center;
+                justify-content: center;
+
+                width: 15vw;
+                margin: 0.5vw;
+
+                text-align: left;
+                font-size: 1.5vw;
+            }
+
+            .descriçao2 {
+                align-items: center;
+                justify-content: center;
+
+                width: 50%;
+                margin: 0.5vw;
+                margin-right: 1vw;
+
+                text-align: right;
+                font-size: 1.5vw;
+            }
+
+            .infoInfo {
+                display: flex;
+
+                align-items: center;
+                justify-content: center;
+
+                text-align: center;
+                font-size: 1.5vw;
+                font-weight: bold;
+            }
+
+            .infoInfo2 {
+                align-items: center;
+                justify-content: center;
+
+                width: 50%;
+                margin: 0.5vw;
+                margin-right: 1vw;
+
+                text-align: left;
+                font-size: 1.5vw;
+                font-weight: bold;
+            }
+
+        .divDireita {
+            display: flex;
+            flex-direction: row;
+            
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+        }
+
+            .selectInput {
+                align-items: center;
+                justify-content: center;
+
+                width: 13vw;
+                margin-right: 0.5vw;
+                border-radius: 0.3vw;
+                border: none;
+
+                text-align: center;
+                font-size: 1vw;
+                font-family: 'Oswald', sans-serif;
+            }
+
+            .confirmButton {
+                align-items: center;
+                justify-content: center;
+
+                width: 7vw;
+                margin-right: 0.5vw;
+                border-radius: 0.3vw;
+                border: none;
+                padding: 0.2vw;
+
+                text-align: center;
+                font-size: 1vw;
+                font-family: 'Oswald', sans-serif;
+
+                cursor: pointer;
+            }
+                .confirmButton:hover {
+                    background-color: rgb(183, 183, 183);
+                }
+
+        .divV {
+            display: flex;
+            flex-direction: column;
+
+            background-color: blue;
+        }
+
+    #parteNacionalidade {
+        margin-bottom: 0;
+        padding-bottom: 0.5vw;
+    }
+                #descriçaoNacionalidade {
+                    margin-bottom: 0.1vw;
+                    
+                }
+
+            #divPaisConfirmar {
+                justify-content: center;
+                align-items: center;
+
+                margin-top: 0.5vw;
+                margin-bottom: 0;
+            }
+
+                
+
+                .divSugestoes {
+                    display: flex;
+                    justify-content: right;
+                    margin-right: 7.7vw;
+                    margin-top: 0;
+                }
+
+                #suggestions {
+                    color: black;
+                    background: linear-gradient(to left, hwb(0 82% 18%), hwb(0 78% 22%));
+
+                    width: 13vw;
+
+                    text-align: center;
+                    
+                    border-bottom-left-radius: 0.8vw;
+                    border-bottom-right-radius: 0.8vw;
+                    margin: 0;
+                }
+                    #suggestions > p {
+                        margin: 0;
+                        padding: 0.5vw;
+
+                        font-size: 1vw;
+
+                        cursor: pointer;
+                    }
+                        #suggestions > p:hover {
+                            background: linear-gradient(to left, hwb(0 50% 50%), hwb(0 29% 71%));
+                            border-bottom-left-radius: 0.8vw;
+                            border-bottom-right-radius: 0.8vw;
+                        }
+
+                    #div-infoNacionalide {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+    .class-botaoConfirmarModal {
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        margin-top: 2vw;
+
+        text-align: center;
+    }
+
+        .botaoConfirmarModal {
+            background: linear-gradient(to right, #219301, #33c40b);
+
+            align-items: center;
+            justify-content: center;
+
+            width: 15vw;
+            margin-right: 0.5vw;
+            border-radius: 0.3vw;
+            border: none;
+            padding: 0.2vw;
+
+            text-align: center;
+            font-size: 1.5vw;
+            font-family: 'Oswald', sans-serif;
+
+            cursor: pointer;
+        }
+            .botaoConfirmarModal:hover {
+                background: linear-gradient(to right, #2bb405, #3cdf0f);
+            }
+
+        #botaoConfirmarModal {
+            background: linear-gradient(to right, #219301, #33c40b);
+
+            align-items: center;
+            justify-content: center;
+
+            width: 15vw;
+            margin-right: 0.5vw;
+            border-radius: 0.3vw;
+            border: none;
+            padding: 0.2vw;
+
+            text-align: center;
+            font-size: 1.5vw;
+            font-family: 'Oswald', sans-serif;
+
+            cursor: pointer;
+        }
+            #botaoConfirmarModal:hover {
+                background: linear-gradient(to right, #2bb405, #3cdf0f);
+            }
+
+
+
+    /*#parteAltura {
+        
+    }*/

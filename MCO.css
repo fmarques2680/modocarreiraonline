@@ -1,0 +1,66 @@
+/*BODY*/
+body {
+    width: 100vw;
+    margin: 0;
+
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+/*HEADER*/
+header {
+    display: flex;
+
+    background-color: black;
+
+    width: 100vw;
+    height: 4vw;
+
+    align-items: center;
+    justify-content: center;
+}
+
+    #id-logoMCO {
+        width: 8vw;
+    }
+
+
+
+/*MENU PRINCIPAL*/
+.class-MenuPrincipal {
+    display: flex;
+    flex-direction: row;
+
+    width: 100vw;
+
+    justify-content: space-between
+}
+
+    .class-botaoMenuPrincipal {
+        /*background-color: #dbdbdb;*/
+        background: linear-gradient(to top, #dbdbdb, hwb(0 55% 45%));
+
+        width: 100vw;
+        border: none;
+        border-left: 0.1vw solid;
+        border-right: 0.1vw solid;
+        border-bottom: 0.2vw solid;
+
+        align-items: center;
+        justify-content: center;
+
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.5vw;
+        text-align: center;
+
+        cursor: pointer;
+    }
+        .class-botaoMenuPrincipal:hover {
+            /*background-color: hsl(0, 0%, 71%);*/
+            background: linear-gradient(to top, #b9b9b9, rgb(97, 97, 97));
+        }
+
+        #id-botaoEmBreve {
+            font-style: italic;
+        }

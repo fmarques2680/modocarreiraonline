@@ -1,0 +1,303 @@
+.root {
+    --primary-color: #000000;
+    --light-primary: #72706E;
+    --lightest-color: #FFFFFF;
+    --secondary-color: #132c6e;
+    --light-secondary: #318ED5;
+
+    /*TONS DE VERDE*/
+    --darkest-green: #1F8F00;
+    --less-dark-green: #28B800;
+    --normal-green: #31E000;
+    --lighter-green: #3FFF0A;
+    --lightest-green: #5FFF33;
+}
+
+
+
+/*BODY*/
+body {
+    width: 100vw;
+    margin: 0;
+
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+/*HEADER*/
+header {
+    display: flex;
+
+    background-color: black;
+
+    width: 100vw;
+    height: 4vw;
+
+    align-items: center;
+    justify-content: center;
+}
+
+    #id-logoMCO {
+        width: 8vw;
+    }
+
+
+
+/*MENU PRINCIPAL*/
+.class-MenuPrincipal {
+    display: flex;
+    flex-direction: row;
+
+    width: 100vw;
+
+    justify-content: space-between
+}
+
+    .class-botaoMenuPrincipal {
+        /*background-color: #dbdbdb;*/
+        background: linear-gradient(to top, #dbdbdb, hwb(0 55% 45%));
+
+        width: 100vw;
+        border: none;
+        border-left: 0.1vw solid;
+        border-right: 0.1vw solid;
+        border-bottom: 0.2vw solid;
+
+        align-items: center;
+        justify-content: center;
+
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.5vw;
+        text-align: center;
+
+        cursor: pointer;
+    }
+        .class-botaoMenuPrincipal:hover {
+            /*background-color: hsl(0, 0%, 71%);*/
+            background: linear-gradient(to top, #b9b9b9, rgb(97, 97, 97));
+        }
+
+        #id-botaoEmBreve {
+            font-style: italic;
+        }
+
+            #id-botaoJogadoresMundo {
+                /*background-color: hsl(0, 0%, 71%);*/
+                background: linear-gradient(to top, #b9b9b9, rgb(97, 97, 97));
+            }
+
+
+
+/*CONTEÚDO DA PÁGINA*/
+
+/*DESCRIÇÃO DA PESQUISA*/
+.class-conteudoPagina {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+    .class-descriçaoPesquisa {
+        margin: 0;
+        margin-top: 2vw;
+        margin-bottom: 1vw;
+
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    .class-input {
+        width: 30vw;
+
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.5vw;
+        text-align: center;
+    }
+
+    /*SUGESTÕES*/
+    .sugestoes {
+        display: flex;
+
+        background-color: #dbdbdb;
+        
+        border-left: solid 0.1vw;
+        border-bottom: solid 0.1vw;
+        border-right: solid 0.1vw;
+        width: 30vw;
+        max-height: 20vw;
+        border-bottom-right-radius: 0.5vw;
+        border-bottom-left-radius: 0.5vw;
+
+        text-align: center;
+        font-size: 1.5vw;
+        
+        overflow-y: auto;
+        cursor: pointer;
+    }
+        .sugestoes p {
+            margin: 0vw;
+        }
+            .sugestoes p:hover {
+                background-color: hsl(0, 0%, 71%);
+            }
+
+
+            
+/*INFORMAÇÕES DO JOGADOR*/
+.player-info {
+    display: flex;
+    display: none;
+
+    background: linear-gradient(to right, black, #3d3d3d);
+
+    position: fixed;
+
+    top: -2vw;
+    
+
+    background-color: black;
+
+    border: solid 0.1vw  black;
+    width: 25vw;
+    margin-top: 20vw;
+    margin-bottom: 2vw;
+    border-radius: 1vw;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    z-index: -1;
+}
+
+    .class-nome {
+        background: linear-gradient(to right, black, #3d3d3d);
+        color: white;
+        
+        margin-top: 0.4vw;
+        margin-bottom: 0.5vw;
+        border-top-left-radius: 1vw;
+        border-top-right-radius: 1vw;
+
+        font-size: 2.3vw;
+    }
+
+
+
+        /*DESCRIÇÃO DAS INFORMAÇÕES*/
+        .class-descriçaoEValores {
+            display: flex;
+            flex-direction: row;
+
+            background: linear-gradient(#5FFF33, #166600);
+            color: white;
+
+            margin-bottom: 1.5vw;
+
+            width: 100%;
+        }                
+
+            .class-descricaoInformaçoes {
+                display: block;
+                flex-direction: column;
+
+                width: 50%;
+
+                font-size: 1.5vw;
+            }
+            
+
+                .class-descricaoInformaçoes p {
+                    
+
+                    
+                    margin: 0;
+                    padding-left: 1vw;
+
+                    text-align: left;
+                }
+            
+            .class-valoresInformaçoes {
+                display: block;
+                flex-direction: column;
+
+                width: 50%;
+
+                font-size: 1.5vw;
+                
+            }
+            
+                .class-valoresInformaçoes p {
+                    
+
+                    
+                    margin: 0;
+                    padding-right: 1vw;
+
+                    text-align: right;
+                }
+                
+.class-ovr {
+    background-color: none;
+    color: #000000;
+
+    font-weight: bold;
+}
+
+.class-posiçao {
+    background-color: none;
+    color: #000;
+
+    border-bottom: 0.1vw solid;
+    padding-bottom: 0.2vw;
+
+    font-weight: bold;
+}
+
+.class-idade {
+    background-color: none;
+    color: #000;
+}
+
+.class-altura {
+    background-color: none;
+    color: #000;
+}
+
+.class-peso {
+    background-color: none;
+    color: #000;
+
+    border-bottom: 0.1vw solid black;
+}
+
+.class-clube {
+    background-color: none;
+    color: #000;
+}
+
+.class-nacionalidade {
+    background-color: none;
+    color: #000;
+
+    border-bottom: 0.1vw solid black;
+}
+
+.class-valor {
+    background-color: none;
+    color: #000;
+
+    border-bottom: 0.1vw solid black;
+}
+
+.class-pace {
+    background-color: none;
+    color: #000;
+
+    border-bottom: 0.1vw solid black;
+}
+

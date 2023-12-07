@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>MCO - Clubes</title>
+
+    <!--FONTES DE TEXTO-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+
+    <!--Arquivo CSS-->
+    <link rel="stylesheet" href="Clubes.css">
+
+</head>
+<body>
+
+    <!--HEADER-->
+    <header>
+        <img id="id-logoMCO" src="https://i.ibb.co/1v3Wqbh/m-Mre-LS-MCO-Novo2-removebg-preview.png" alt="Imagem não carregada.">
+    </header>
+
+    <!--MAIN-->
+    <main>
+        <!--MENU-->
+        <div class="class-MenuPrincipal">
+            <button class="class-botaoMenuPrincipal" id="id-botaoJogadoresMundo">Jogadores do Mundo</button>
+            <button class="class-botaoMenuPrincipal" id="id-botaoClubes">Clubes</button>
+            <button class="class-botaoMenuPrincipal" id="id-botaoEmBreve">(Em breve...)</button>
+        </div>
+
+        <!-- BOTÕES DOS CLUBES -->
+            <!-- CLUBE 1 -->
+            <div id="id-divClube1" class="class-divClube">
+                <div class="class-modalEdiçaoClube" id="id-modalEdiçaoClube1">
+                    <input type="text" id="inputClube1" class="class-inputClube" placeholder="Nome do clube participante da liga">
+                    <button class="class-botaoConfirmarClube" onclick="adicionarClube('inputClube1', 'clubeSelecionado1', 'id-modalEdiçaoClube1')">Confirmar</button>
+                </div>
+                <div class="class-espaçoClube">
+                    <button id="Botao-A" class="class-botaoEditar">Editar</button>
+                    <div id="clubeSelecionado1" class="class-clubeSelecionado"></div>
+                    <button id="id-linkClube1" class="class-linkClube">>>></button>
+                </div>
+            </div>
+
+            <!-- CLUBE 2 -->
+            <div id="id-divClube2" class="class-divClube">
+                <div class="class-modalEdiçaoClube" id="id-modalEdiçaoClube2">
+                    <input type="text" id="inputClube2" class="class-inputClube" placeholder="Nome do clube participante da liga">
+                    <button class="class-botaoConfirmarClube" onclick="adicionarClube('inputClube2', 'clubeSelecionado2', 'id-modalEdiçaoClube2')">Confirmar</button>
+                </div>
+                <div class="class-espaçoClube">
+                    <button id="Botao-B" class="class-botaoEditar">Editar</button>
+                    <div id="clubeSelecionado2" class="class-clubeSelecionado"></div>
+                    <button id="id-linkClube2" class="class-linkClube">>>></button>
+                </div>
+            </div>
+
+            <!-- CLUBE 3 -->
+            <div id="id-divClube3" class="class-divClube">
+                <div class="class-modalEdiçaoClube" id="id-modalEdiçaoClube3">
+                    <input type="text" id="inputClube3" class="class-inputClube" placeholder="Nome do clube participante da liga">
+                    <button class="class-botaoConfirmarClube" onclick="adicionarClube('inputClube3', 'clubeSelecionado3', 'id-modalEdiçaoClube3')">Confirmar</button>
+                </div>
+                <div class="class-espaçoClube">
+                    <button id="Botao-C" class="class-botaoEditar">Editar</button>
+                    <div id="clubeSelecionado3" class="class-clubeSelecionado"></div>
+                    <button id="id-linkClube3" class="class-linkClube">>>></button>
+                </div>
+            </div>
+
+            <!-- CLUBE 4 -->
+            <div id="id-divClube4" class="class-divClube">
+                <div class="class-modalEdiçaoClube" id="id-modalEdiçaoClube4">
+                    <input type="text" id="inputClube4" class="class-inputClube" placeholder="Nome do clube participante da liga">
+                    <button class="class-botaoConfirmarClube" onclick="adicionarClube('inputClube4', 'clubeSelecionado4', 'id-modalEdiçaoClube4')">Confirmar</button>
+                </div>
+                <div class="class-espaçoClube">
+                    <button id="Botao-D" class="class-botaoEditar">Editar</button>
+                    <div id="clubeSelecionado4" class="class-clubeSelecionado"></div>
+                    <button id="id-linkClube4" class="class-linkClube">>>></button>
+                </div>
+            </div>
+
+            <!-- CLUBE 5 -->
+            <div id="id-divClube5" class="class-divClube">
+                <div class="class-modalEdiçaoClube" id="id-modalEdiçaoClube5">
+                    <input type="text" id="inputClube5" class="class-inputClube" placeholder="Nome do clube participante da liga">
+                    <button class="class-botaoConfirmarClube" onclick="adicionarClube('inputClube5', 'clubeSelecionado5', 'id-modalEdiçaoClube5')">Confirmar</button>
+                </div>
+                <div class="class-espaçoClube">
+                    <button id="Botao-E" class="class-botaoEditar">Editar</button>
+                    <div id="clubeSelecionado5" class="class-clubeSelecionado"></div>
+                    <button id="id-linkClube5" class="class-linkClube">>>></button>
+                </div>
+            </div>
+
+            <!-- CLUBE 6 -->
+            <div id="id-divClube6" class="class-divClube">
+                <div class="class-modalEdiçaoClube" id="id-modalEdiçaoClube6">
+                    <input type="text" id="inputClube6" class="class-inputClube" placeholder="Nome do clube participante da liga">
+                    <button class="class-botaoConfirmarClube" onclick="adicionarClube('inputClube6', 'clubeSelecionado6', 'id-modalEdiçaoClube6')">Confirmar</button>
+                </div>
+                <div class="class-espaçoClube">
+                    <button id="Botao-F" class="class-botaoEditar">Editar</button>
+                    <div id="clubeSelecionado6" class="class-clubeSelecionado"></div>
+                    <button id="id-linkClube6" class="class-linkClube">>>></button>
+                </div>
+            </div>
+
+            <!-- CLUBE 7 -->
+            <div id="id-divClube7" class="class-divClube">
+                <div class="class-modalEdiçaoClube" id="id-modalEdiçaoClube7">
+                    <input type="text" id="inputClube7" class="class-inputClube" placeholder="Nome do clube participante da liga">
+                    <button class="class-botaoConfirmarClube" onclick="adicionarClube('inputClube7', 'clubeSelecionado7', 'id-modalEdiçaoClube7')">Confirmar</button>
+                </div>
+                <div class="class-espaçoClube">
+                    <button id="Botao-G" class="class-botaoEditar">Editar</button>
+                    <div id="clubeSelecionado7" class="class-clubeSelecionado"></div>
+                    <button id="id-linkClube7" class="class-linkClube">>>></button>
+                </div>
+            </div>
+
+            <!-- CLUBE 8 -->
+            <div id="id-divClube8" class="class-divClube">
+                <div class="class-modalEdiçaoClube" id="id-modalEdiçaoClube8">
+                    <input type="text" id="inputClube8" class="class-inputClube" placeholder="Nome do clube participante da liga">
+                    <button class="class-botaoConfirmarClube" onclick="adicionarClube('inputClube8', 'clubeSelecionado8', 'id-modalEdiçaoClube8')">Confirmar</button>
+                </div>
+                <div class="class-espaçoClube">
+                    <button id="Botao-H" class="class-botaoEditar">Editar</button>
+                    <div id="clubeSelecionado8" class="class-clubeSelecionado"></div>
+                    <button id="id-linkClube8" class="class-linkClube">>>></button>
+                </div>
+            </div>
+
+            <!-- CLUBE 9 -->
+            <div id="id-divClube9" class="class-divClube">
+                <div class="class-modalEdiçaoClube" id="id-modalEdiçaoClube9">
+                    <input type="text" id="inputClube9" class="class-inputClube" placeholder="Nome do clube participante da liga">
+                    <button class="class-botaoConfirmarClube" onclick="adicionarClube('inputClube9', 'clubeSelecionado9', 'id-modalEdiçaoClube9')">Confirmar</button>
+                </div>
+                <div class="class-espaçoClube">
+                    <button id="Botao-I" class="class-botaoEditar">Editar</button>
+                    <div id="clubeSelecionado9" class="class-clubeSelecionado"></div>
+                    <button id="id-linkClube9" class="class-linkClube">>>></button>
+                </div>
+            </div>
+
+            <!-- CLUBE 10 -->
+            <div id="id-divClube10" class="class-divClube">
+                <div class="class-modalEdiçaoClube" id="id-modalEdiçaoClube10">
+                    <input type="text" id="inputClube10" class="class-inputClube" placeholder="Nome do clube participante da liga">
+                    <button class="class-botaoConfirmarClube" onclick="adicionarClube('inputClube10', 'clubeSelecionado10', 'id-modalEdiçaoClube10')">Confirmar</button>
+                </div>
+                <div class="class-espaçoClube">
+                    <button id="Botao-J" class="class-botaoEditar">Editar</button>
+                    <div id="clubeSelecionado10" class="class-clubeSelecionado"></div>
+                    <button id="id-linkClube10" class="class-linkClube">>>></button>
+                </div>
+            </div>
+
+            <!-- CLUBE 11 -->
+            <div id="id-divClube11" class="class-divClube">
+                <div class="class-modalEdiçaoClube" id="id-modalEdiçaoClube11">
+                    <input type="text" id="inputClube11" class="class-inputClube" placeholder="Nome do clube participante da liga">
+                    <button class="class-botaoConfirmarClube" onclick="adicionarClube('inputClube11', 'clubeSelecionado11', 'id-modalEdiçaoClube11')">Confirmar</button>
+                </div>
+                <div class="class-espaçoClube">
+                    <button id="Botao-K" class="class-botaoEditar">Editar</button>
+                    <div id="clubeSelecionado11" class="class-clubeSelecionado"></div>
+                    <button id="id-linkClube11" class="class-linkClube">>>></button>
+                </div>
+            </div>
+        
+    </main>
+    
+    <!--Arquivo JS-->
+    <script src="Clubes.js"></script>
+
+</body>
+</html>

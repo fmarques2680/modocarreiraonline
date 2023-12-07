@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCO - Página do clube</title>
+
+    <!--FONTES DE TEXTO-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+
+    <!--ARQUIVO CCS-->
+    <link rel="stylesheet" href="Clube1.css">
+
+</head>
+<body>
+
+    <!--HEADER-->
+    <header>
+        <img id="id-logoMCO" src="https://i.ibb.co/1v3Wqbh/m-Mre-LS-MCO-Novo2-removebg-preview.png" alt="Imagem não carregada.">
+    </header>
+
+    <!--MAIN-->
+    <main>
+
+        <!--MENU-->
+        <div class="class-MenuPrincipal">
+            <button class="class-botaoMenuPrincipal" id="id-botaoJogadoresMundo">Jogadores do Mundo</button>
+            <button class="class-botaoMenuPrincipal" id="id-botaoClubes">Clubes</button>
+            <button class="class-botaoMenuPrincipal" id="id-botaoEmBreve">(Em breve...)</button>
+        </div>
+
+        <!--NOME DO CLUBE-->
+        <div id="clubeInfo"></div>
+
+        <!--MENU DO CLUBE-->
+        <div class="class-menuClube">
+            <button class="class-botaoMenuClube" id="id-botaoElenco">Elenco</button>
+            <button class="class-botaoMenuClube" id="id-botaoEmBreve-2">Categoria de Base</button>
+        </div>
+
+
+        <!--TEMPORADA ATUAL-->
+        <div>
+            <p id="id-temporadaAtual">Temporada</p>
+        </div>
+
+        <button id="salvarPagina">Salvar</button>
+
+
+        <!--TABELA DE ELENCO-->
+        <table id="elenco-table">
+            <thead>
+                <tr>
+                    <th>Posição</th>
+                    <th>OVR</th>
+                    <th>Nome</th>
+                    <th>Nacionalidade</th>
+                    <th>Idade</th>
+                    <th>Altura</th>
+                    <th>Peso</th>
+                    <th>Valor estimado</th>
+                    <th>Pace</th>
+                    <th id="id-colunaClube">Clube</th>
+                </tr>
+            </thead>
+            <tbody id="elenco-body">
+                <!-- As linhas dos jogadores serão adicionadas aqui -->
+            </tbody>
+        </table>
+        <div class="class-alteraçoesElenco">
+
+            <p>Alterações no elenco:</p>
+
+            <div class="class-botoesAlteraçoesElenco">
+
+                <button class="class-botaoAlteraçaoElenco" id="id-botaoMudarPosiçaoJogadorElenco">Mudar posição de jogador</button>
+
+                <div id="id-adiçaoRemoçaoJogadoresElenco">
+                    <button class="class-botaoAlteraçaoElenco" id="id-botaoAdicionarJogadorElenco">Adicionar contratação ao elenco</button>
+                    <button class="class-botaoAlteraçaoElenco" id="id-botaoRemoverJogadorElenco">Remover jogador do elenco</button>
+                </div>
+                
+            </div>
+            
+            <div class="class-pesquisaJogador">
+                <input type="text" id="id-input" style="display: none;" placeholder="Procure o nome do jogador">
+                <div id="suggestions" style="display: none;"></div>
+            </div>
+
+            <!--EXCLUSÃO DE JOGADOR-->
+            <div id="confirmation-modal" class="modal">
+                <div class="modal-content">
+                    <p id="modal-text">Tem certeza que deseja remover este jogador do elenco?</p>
+                    <div class="class-botoesSimNao">
+                        <button id="modal-confirm-button" class="modal-button">Sim</button>
+                        <button id="modal-cancel-button" class="modal-button">Não</button>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay"></div>
+
+            <div id="instrucao-remocao" style="display: none;">
+                Selecione o jogador que deve ser removido do elenco.
+            </div>
+
+            <!--MUDANÇA DE POSIÇÃO DE JOGADOR-->
+            <div id="position-modal" class="modal">
+                <div class="modal-content">
+                    <p id="p-modal-text">Tem certeza que deseja remover este jogador do elenco?</p>
+
+                    <select name="name-position-select" id="id-position-select">
+                        <option value="GK">GK</option>
+                        <option value="CB">CB</option>
+                        <option value="RB">RB</option>
+                        <option value="RWB">RWB</option>
+                        <option value="LB">LB</option>
+                        <option value="CDM">CDM</option>
+                        <option value="CM">CM</option>
+                        <option value="RM">RM</option>
+                        <option value="LM">LM</option>
+                        <option value="CAM">CAM</option>
+                        <option value="CF">CF</option>
+                        <option value="RW">RW</option>
+                        <option value="LW">LW</option>
+                        <option value="ST">ST</option>
+                    </select>
+
+                    <div class="class-botoesSimNao">
+                        <button id="p-modal-confirm-button" class="modal-button">Confirmar</button>
+                        <button id="p-modal-cancel-button" class="modal-button">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay"></div>
+
+            <div id="instrucao-mudança-posiçao" style="display: none;">
+                Selecione o jogador que terá sua posição principal alterada.
+            </div>
+
+
+        </div>
+
+
+        <button id="id-botaoAbrirModalFinalizarTemporada">Finalizar temporada</button>
+
+
+
+
+
+        <!--ABRIR MODAL DE FINALIZAR TEMPORADA-->
+
+        <!--MODAL DE FINALIZAR TEMPORADA-->
+        <div id="id-modalFinalizarTemporada" class="class-modalFinalizarTemporada">
+
+            <div class="class-divisaoQuadrados">
+                <p id="id-avisoModalFinalizarTemporada">É de extrema importância que no elenco do clube estejam todos os jogadores contratados pelo clube na segunda metade da temporada atual. Qualquer transação na Janela de Verão deverá ser feita após finalizar a temporada.</p>
+            </div>
+
+            <!--PRIMEIRA LINHA-->
+            <div class="class-linhasGerais">
+                <!--TÍTULOS E DESCRIÇÕES: LINHA 1-->
+                <div class="class-divisaoQuadrados">
+                    <div id="id-jogadoresSub23MaisSurpreendetes" class="class-categoriaTabelaOVR">
+                        <p class="class-tituloCategoria">Jogadores sub-23 mais surpreendentes da temporada</p>
+                        <p class="class-descriçaoCategoria">O conceito se trata da atuação surpreendente do jogador em relação ao OVR dele. Deverão ser considerados os jogadores sub-23 que atuaram pelo menos por 180 minutos durante toda a temporada.</p>
+                    </div>
+
+                    <div id="id-jogadoresSurpreendetes" class="class-categoriaTabelaOVR"> 
+                        <p class="class-tituloCategoria">Jogadores surpreendentes da temporada</p>
+                        <p class="class-descriçaoCategoria">O conceito se trata da atuação surpreendente do jogador em relação ao OVR dele.</p>
+                    </div>
+
+                    <div id="id-apertura" class="class-categoriaTabelaOVR"> 
+                        <p class="class-tituloCategoriaMD">Torneio Apertura <br> Melhor defesa</p>
+                        <p class="class-descriçaoCategoria">Deverão ser considerados os jogadores atuantes no sistema defensivo do time por pelo menos 180 minutos do Torneio Apertura.</p>
+                    </div>
+                </div>
+                
+
+                <!--CONTEÚDO: LINHA 1-->
+                <div class="class-divisaoQuadrados">
+
+                    <!--SUB-23-->
+                    <div>
+                        <!--SUB-23 MAIS SURPREENDENTE-->
+                        <p class="class-subtituloCategoria">Jogador sub-23 mais surpreendente do time</p>
+
+                        <div class="class-seleçaoJogadorLista">
+                            <select class="class-selectAdicionarJogadorLista" id="id-selectAdicionarJogador1SS23"></select>
+                            <button class="class-botaoAdicionarJogadorLista" id="id-botaoAdicionarJogadorLista1SS23">Confirmar</button>
+                        </div>
+                        
+                        <ul class="class-listaJogadoresSelecionados" id="listaJogadores1SS23"></ul>
+
+                        <!--2º SUB-23 MAIS SURPREENDENTE-->
+                        <p class="class-subtituloCategoria">2º jogador sub-23 mais surpreendente do time</p>
+
+                        <div class="class-seleçaoJogadorLista">
+                            <select class="class-selectAdicionarJogadorLista" id="id-selectAdicionarJogador2SS23"></select>
+                            <button class="class-botaoAdicionarJogadorLista" id="id-botaoAdicionarJogadorLista2SS23">Confirmar</button>
+                        </div>
+                        <ul class="class-listaJogadoresSelecionados" id="listaJogadores2SS23"></ul>
+
+                        <!--3º SUB-23 MAIS SURPREENDENTE-->
+                        <p class="class-subtituloCategoria">Demais jogadores sub-23 do time</p>
+
+                        <div class="class-seleçaoJogadorLista">
+                            <select class="class-selectAdicionarJogadorLista" id="id-selectAdicionarJogador3SS23"></select>
+                            <button class="class-botaoAdicionarJogadorLista" id="id-botaoAdicionarJogadorLista3SS23">Confirmar</button>
+                        </div>
+                        <ul class="class-listaJogadoresSelecionados" id="listaJogadores3SS23"></ul>
+                    </div>
+
+
+                    <!--SURPREENDENTES-->
+                    <div>
+                        <!--3 PRINCIPAIS SURPREENDENTES-->
+                        <p class="class-subtituloCategoria">3 surpreendentes principais</p>
+
+                        <div class="class-seleçaoJogadorLista">
+                            <select class="class-selectAdicionarJogadorLista" id="id-selectAdicionarJogadorPS"></select>
+                            <button class="class-botaoAdicionarJogadorLista" id="id-botaoAdicionarJogadorListaPS">Confirmar</button>
+                        </div>
+                        <ul class="class-listaJogadoresSelecionados" id="listaJogadoresPS"></ul>
+
+                        <!--2 SURPREENDENTES SECUNDÁRIOS-->
+                        <p class="class-subtituloCategoria">2 surpreendentes secundários</p>
+
+                        <div class="class-seleçaoJogadorLista">
+                            <select class="class-selectAdicionarJogadorLista" id="id-selectAdicionarJogadorSS"></select>
+                            <button class="class-botaoAdicionarJogadorLista" id="id-botaoAdicionarJogadorListaSS">Confirmar</button>
+                        </div>
+                        <ul class="class-listaJogadoresSelecionados" id="listaJogadoresSS"></ul>
+                    </div>
+
+
+                    <!--APERTURA - MELHOR DEFESA-->
+                    <div>
+                        <!--TITULARES-->
+                        <p class="class-subtituloCategoria">Melhor defesa - Titulares mais impactantes</p>
+
+                        <div class="class-seleçaoJogadorLista">
+                            <select class="class-selectAdicionarJogadorLista" id="id-selectAdicionarJogadorTMDA"></select>
+                            <button class="class-botaoAdicionarJogadorLista" id="id-botaoAdicionarJogadorListaTMDA">Confirmar</button>
+                        </div>
+                        <ul class="class-listaJogadoresSelecionados" id="listaJogadoresTMDA"></ul>
+
+                        <!--TITULAR MENOS IMPACTANTE-->
+                        <p class="class-subtituloCategoria">Melhor defesa - 1 titular menos impactante</p>
+
+                        <div class="class-seleçaoJogadorLista">
+                            <select class="class-selectAdicionarJogadorLista" id="id-selectAdicionarJogadorTMIMDA"></select>
+                            <button class="class-botaoAdicionarJogadorLista" id="id-botaoAdicionarJogadorListaTMIMDA">Confirmar</button>
+                        </div>
+                        <ul class="class-listaJogadoresSelecionados" id="listaJogadoresTMIMDA"></ul>
+
+                        <!--RESERVAS-->
+                        <p class="class-subtituloCategoria">Melhor defesa - Reservas</p>
+
+                        <div class="class-seleçaoJogadorLista">
+                            <select class="class-selectAdicionarJogadorLista" id="id-selectAdicionarJogadorRMDA"></select>
+                            <button class="class-botaoAdicionarJogadorLista" id="id-botaoAdicionarJogadorListaRMDA">Confirmar</button>
+                        </div>
+                        <ul class="class-listaJogadoresSelecionados" id="listaJogadoresRMDA"></ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--SEGUNDA LINHA-->
+            <div class="class-linhasGerais">
+                <!--TÍTULOS E DESCRIÇÕES: LINHA 1-->
+                <div class="class-divisaoQuadrados">
+                    <div id="id-apertura" class="class-categoriaTabelaOVR">
+                        <p class="class-tituloCategoriaMD">Torneio Apertura <br> 2ª melhor defesa</p>
+                        <p class="class-descriçaoCategoria">Deverão ser considerados os jogadores atuantes no sistema defensivo do time por pelo menos 180 minutos do Torneio Apertura.</p>
+                    </div>
+
+                    <div id="id-apertura" class="class-categoriaTabelaOVR">
+                        <p class="class-tituloCategoriaMD">Torneio Clausura <br> Melhor defesa</p>
+                        <p class="class-descriçaoCategoria">Deverão ser considerados os jogadores atuantes no sistema defensivo do time por pelo menos 180 minutos do Torneio Clausura.</p>
+                    </div>
+
+                    <div id="id-apertura" class="class-categoriaTabelaOVR">
+                        <p class="class-tituloCategoriaMD">Torneio Clausura <br> 2ª melhor defesa</p>
+                        <p class="class-descriçaoCategoria">Deverão ser considerados os jogadores atuantes no sistema defensivo do time por pelo menos 180 minutos do Torneio Clausura.</p>
+                    </div>
+
+                    
+                </div>
+                
+
+                <!--CONTEÚDO: LINHA 1-->
+                <div class="class-divisaoQuadrados">
+
+                    <!--APERTURA - 2ª MELHOR DEFESA-->
+                    <div>
+                        <!--TITULARES-->
+                        <p class="class-subtituloCategoria">2ª melhor defesa - Titulares</p>
+
+                        <div class="class-seleçaoJogadorLista">
+                            <select class="class-selectAdicionarJogadorLista" id="id-selectAdicionarJogadorT2MDA"></select>
+                            <button class="class-botaoAdicionarJogadorLista" id="id-botaoAdicionarJogadorListaT2MDA">Confirmar</button>
+                        </div>
+                        <ul class="class-listaJogadoresSelecionados" id="listaJogadoresT2MDA"></ul>
+
+                        <!--RESERVAS-->
+                        <p class="class-subtituloCategoria">2ª melhor defesa - Reservas</p>
+
+                        <div class="class-seleçaoJogadorLista">
+                            <select class="class-selectAdicionarJogadorLista" id="id-selectAdicionarJogadorR2MDA"></select>
+                            <button class="class-botaoAdicionarJogadorLista" id="id-botaoAdicionarJogadorListaR2MDA">Confirmar</button>
+                        </div>
+                        <ul class="class-listaJogadoresSelecionados" id="listaJogadoresR2MDA"></ul>
+                    </div>
+
+                    <!--CLAUSURA - MELHOR DEFESA-->
+                    <div>
+                        <!--TITULARES-->
+                        <p class="class-subtituloCategoria">Melhor defesa - Titulares mais impactantes</p>
+
+                        <div class="class-seleçaoJogadorLista">
+                            <select class="class-selectAdicionarJogadorLista" id="id-selectAdicionarJogadorTMDC"></select>
+                            <button class="class-botaoAdicionarJogadorLista" id="id-botaoAdicionarJogadorListaTMDC">Confirmar</button>
+                        </div>
+                        <ul class="class-listaJogadoresSelecionados" id="listaJogadoresTMDC"></ul>
+
+                        <!--TITULAR MENOS IMPACTANTE-->
+                        <p class="class-subtituloCategoria">Melhor defesa - 1 titular menos impactante</p>
+
+                        <div class="class-seleçaoJogadorLista">
+                            <select class="class-selectAdicionarJogadorLista" id="id-selectAdicionarJogadorTMIMDC"></select>
+                            <button class="class-botaoAdicionarJogadorLista" id="id-botaoAdicionarJogadorListaTMIMDC">Confirmar</button>
+                        </div>
+                        <ul class="class-listaJogadoresSelecionados" id="listaJogadoresTMIMDC"></ul>
+
+                        <!--RESERVAS-->
+                        <p class="class-subtituloCategoria">Melhor defesa - Reservas</p>
+
+                        <div class="class-seleçaoJogadorLista">
+                            <select class="class-selectAdicionarJogadorLista" id="id-selectAdicionarJogadorRMDC"></select>
+                            <button class="class-botaoAdicionarJogadorLista" id="id-botaoAdicionarJogadorListaRMDC">Confirmar</button>
+                        </div>
+                        <ul class="class-listaJogadoresSelecionados" id="listaJogadoresRMDC"></ul>
+                    </div>
+
+                    <!--CLAUSURA - 2ª MELHOR DEFESA-->
+                    <div>
+                        <!--TITULARES-->
+                        <p class="class-subtituloCategoria">2ª melhor defesa - Titulares</p>
+
+                        <div class="class-seleçaoJogadorLista">
+                            <select class="class-selectAdicionarJogadorLista" id="id-selectAdicionarJogadorT2MDC"></select>
+                            <button class="class-botaoAdicionarJogadorLista" id="id-botaoAdicionarJogadorListaT2MDC">Confirmar</button>
+                        </div>
+                        <ul class="class-listaJogadoresSelecionados" id="listaJogadoresT2MDC"></ul>
+
+                        <!--RESERVAS-->
+                        <p class="class-subtituloCategoria">2ª melhor defesa - Reservas</p>
+
+                        <div class="class-seleçaoJogadorLista">
+                            <select class="class-selectAdicionarJogadorLista" id="id-selectAdicionarJogadorR2MDC"></select>
+                            <button class="class-botaoAdicionarJogadorLista" id="id-botaoAdicionarJogadorListaR2MDC">Confirmar</button>
+                        </div>
+                        <ul class="class-listaJogadoresSelecionados" id="listaJogadoresR2MDC"></ul>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+
+            <button id="id-botaoBModalFinalizarTemporada">Finalizar temporada</button>
+
+            <div id="id-divConfirmacaoFinalizarTemporada">
+                <p id="id-mensagemConfirmaçaoFinalizarTemporada" class="botaoFadeIn">Tem certeza que deseja finalizar a temporada?</p>
+                <div id="id-divSimNaoFinalizarTemporada">
+                    <button id="id-botaoModalFinalizarTemporada" class="botaoFadeIn" class="class-botoesSimNaoFinalizarTemporada">Sim</button>
+                    <button id="id-botaoModalNaoFinalizarTemporada" class="botaoFadeIn" class="class-botoesSimNaoFinalizarTemporada">Não</button>
+                </div>
+            </div>
+
+
+        </div>
+        
+
+    </main>
+
+    <!--ARQUIVO JS-->
+    <script src="Clube1.js"></script>
+    
+</body>
+</html>
