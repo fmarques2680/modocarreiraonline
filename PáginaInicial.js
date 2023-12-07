@@ -1,9 +1,15 @@
 //BOTÃO ENTRAR EM UM UNIVERO
 document.addEventListener("DOMContentLoaded", function () {
+    // Selecionar o botão
     const botaoEntrarEmUmUniverso = document.getElementById("id-botao-entrar-em-um-unviverso");
 
+    // Adicionar um ouvinte de evento para o clique no botão
     botaoEntrarEmUmUniverso.addEventListener("click", function() {
-    window.location.href = "/MCO/MCO.html";
+        // URL para o qual você deseja redirecionar
+        var url = "https://fmarques2680.github.io/modocarreiraonline/MCO/MCO.html";
+
+        // Realizar o redirecionamento
+        window.location.href = url;
     });
 });
 
