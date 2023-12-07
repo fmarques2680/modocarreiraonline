@@ -351,7 +351,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return; // Sai da função se o comprimento for inferior a 3 caracteres
             }
 
-            fetch('../../../JogadoresEAFC.csv') // Faz uma solicitação ao arquivo CSV
+            fetch('JogadoresEAFC.csv') // Faz uma solicitação ao arquivo CSV
                 .then(response => response.text()) // Resposta da solicitação convertida em texto
                 .then(data => {
                     const lines = data.split('\n'); // Cada linha se torna um elemento
