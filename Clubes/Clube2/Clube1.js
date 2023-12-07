@@ -114,7 +114,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const botaoJogadoresMundo = document.getElementById("id-botaoJogadoresMundo");
 
     botaoJogadoresMundo.addEventListener("click", function () {
-        window.location.href = "../../../Jogadores do Mundo/JogadoresDoMundo.html";
+        var url = "https://fmarques2680.github.io/modocarreiraonline/JogadoresDoMundo/JogadoresDoMundo.html";
+        window.location.href = url;
     });
 
 //Link para Base

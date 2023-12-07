@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     botaoClubes.addEventListener("click", function () {
-        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clubes.html";
+        var url = "https://fmarques2680.github.io/modocarreiraonline/JogadoresDoMundo/JogadoresDoMundo.html";
         window.location.href = url;
     })
 })
