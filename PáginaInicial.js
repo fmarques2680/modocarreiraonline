@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const botaoEntrarEmUmUniverso = document.getElementById("id-botao-entrar-em-um-unviverso");
 
     botaoEntrarEmUmUniverso.addEventListener("click", function() {
-    window.location.href = "MCO.html";
+    window.location.href = "MCO/MCO.html";
     });
 });
 
