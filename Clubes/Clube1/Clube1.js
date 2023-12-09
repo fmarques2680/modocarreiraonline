@@ -1,5 +1,14 @@
 //LINKS PARA AS PÁGINAS
-//Link para Clubes    
+//Link para Clubes   
+
+fetch('https://backendmco.vercel.app/api', {
+  method: 'GET',
+  mode: 'cors',
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Erro:', error));
+
 
 function carregarDados() {
     const options = { method: 'GET', headers: { 'User-Agent': 'insomnia/8.4.5' } };
