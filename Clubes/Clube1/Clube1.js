@@ -1,13 +1,6 @@
 //LINKS PARA AS PÁGINAS
 //Link para Clubes   
 
-fetch('https://backendmco.vercel.app/api', {
-  method: 'GET',
-  mode: 'cors',
-})
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error('Erro:', error));
 
 
 function carregarDados() {
@@ -57,6 +50,15 @@ function carregarDados() {
 carregarDados();
 
 document.addEventListener("DOMContentLoaded", function () {
+
+    // Código fetch aqui
+    fetch('https://backendmco.vercel.app/api', {
+        method: 'GET',
+        mode: 'cors',
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Erro:', error));
 
 
     function salvarDados() {
