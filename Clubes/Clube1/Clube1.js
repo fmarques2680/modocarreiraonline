@@ -1,13 +1,6 @@
-//LINKS PARA AS PÁGINAS
-//Link para Clubes   
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Código fetch aqui
+    // Exemplo de requisição GET
     fetch('https://backendmco.vercel.app/api', {
         method: 'GET',
         mode: 'cors',
@@ -15,6 +8,42 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error('Erro:', error));
+
+    // Exemplo de requisição POST
+    fetch('https://backendmco.vercel.app/api', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ key: 'value' }),
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Erro:', error));
+
+    // Exemplo de requisição PUT
+    fetch('https://backendmco.vercel.app/api', {
+        method: 'PUT',
+        mode: 'cors',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ key: 'new value' }),
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Erro:', error));
+
+    // Exemplo de requisição DELETE
+    fetch('https://backendmco.vercel.app/api', {
+        method: 'DELETE',
+        mode: 'cors',
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Erro:', error));
+
 
 
     function carregarDados() {
