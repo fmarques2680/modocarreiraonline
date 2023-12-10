@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    carregarDadosLocalStorage();
+    //carregarDadosLocalStorage();
 
     const botaoClubes = document.getElementById("id-botaoClubes");
 
