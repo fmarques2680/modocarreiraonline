@@ -35,15 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(data => console.log(data))
     .catch(error => console.error('Erro:', error));
 
-    // Exemplo de requisição DELETE
-    fetch('https://backendmco.vercel.app/api', {
-        method: 'DELETE',
-        mode: 'cors',
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Erro:', error));
-
 
 
     function carregarDados() {
@@ -151,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    //carregarDadosLocalStorage();
+    carregarDadosLocalStorage();
 
     const botaoClubes = document.getElementById("id-botaoClubes");
 
@@ -270,8 +261,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 var clubeCell = linha.cells[9];
 
 
-                //aplicarFormatacaoCondicional(posicaoCell, ovrCell);
-                //aplicarFormatacaoCondicional2(paceCell, clubeCell);
+                aplicarFormatacaoCondicional(posicaoCell, ovrCell);
+                aplicarFormatacaoCondicional2(paceCell, clubeCell);
             }
         }
 
@@ -293,7 +284,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function aplicarFormatacaoCondicional(posicaoCell, ovrCell) {
         // Obtenha os valores das células
         var valorCelulaPosicao = posicaoCell.textContent;
-        //var valorCelulaOVR = ovrCell.textContent;
+        var valorCelulaOVR = ovrCell.textContent;
 
         // Adicione classes de formatação condicional
         if (valorCelulaPosicao === 'GK') {
@@ -317,10 +308,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    //function aplicarFormatacaoCondicional2(paceCell, clubeCell) {
-    //    paceCell.classList.add('class-colunaPace');
-    //    clubeCell.style.display = 'none';
-    //}
+    function aplicarFormatacaoCondicional2(paceCell, clubeCell) {
+        paceCell.classList.add('class-colunaPace');
+        clubeCell.style.display = 'none';
+    }
 
 
 
