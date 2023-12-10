@@ -126,10 +126,17 @@ document.addEventListener("DOMContentLoaded", function () {
             body: JSON.stringify(objeto)
         };
 
-        fetch('https://backendmco.vercel.app/api', options)
-            .then(response => response.json())
-            .then(response => console.log(response))
-            .catch(err => console.error(err));
+        fetch('https://backendmco.vercel.app/api', {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ key: 'value' }),
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Erro:', error));
     }
 
 
