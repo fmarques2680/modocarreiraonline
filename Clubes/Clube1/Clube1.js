@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    carregarDadosLocalStorage();
+    //carregarDadosLocalStorage();
 
     const botaoClubes = document.getElementById("id-botaoClubes");
 
@@ -797,7 +797,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             salvarDadosLocalStorage();
 
-            aplicarFormatacaoCondicional();
+            //aplicarFormatacaoCondicional();
         });
 
 
@@ -1557,7 +1557,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     reorderTable();
-    aplicarFormatacaoCondicional();
+    //aplicarFormatacaoCondicional();
 
 
 
