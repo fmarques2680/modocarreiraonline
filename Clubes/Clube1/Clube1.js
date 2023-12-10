@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 //aplicarFormatacaoCondicional(posicaoCell, ovrCell);
-                aplicarFormatacaoCondicional2(paceCell, clubeCell);
+                //aplicarFormatacaoCondicional2(paceCell, clubeCell);
             }
         }
 
@@ -317,10 +317,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    function aplicarFormatacaoCondicional2(paceCell, clubeCell) {
-        paceCell.classList.add('class-colunaPace');
-        clubeCell.style.display = 'none';
-    }
+    //function aplicarFormatacaoCondicional2(paceCell, clubeCell) {
+    //    paceCell.classList.add('class-colunaPace');
+    //    clubeCell.style.display = 'none';
+    //}
 
 
 
