@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 var clubeCell = linha.cells[9];
 
 
-                aplicarFormatacaoCondicional(posicaoCell, ovrCell);
+                //aplicarFormatacaoCondicional(posicaoCell, ovrCell);
                 aplicarFormatacaoCondicional2(paceCell, clubeCell);
             }
         }
@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function aplicarFormatacaoCondicional(posicaoCell, ovrCell) {
         // Obtenha os valores das células
         var valorCelulaPosicao = posicaoCell.textContent;
-        var valorCelulaOVR = ovrCell.textContent;
+        //var valorCelulaOVR = ovrCell.textContent;
 
         // Adicione classes de formatação condicional
         if (valorCelulaPosicao === 'GK') {
