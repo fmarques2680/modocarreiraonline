@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    //carregarDadosLocalStorage();
+    
 
     const botaoClubes = document.getElementById("id-botaoClubes");
 
