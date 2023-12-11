@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Salva o valor do clube na página:
     // Recupere o valor armazenado na chave "clubeSelecionado" do Local Storage
-    var clubeSelecionado = localStorage.getItem('clubeSelecionado1');
+    var clubeSelecionado = localStorage.getItem('clubeSelecionado2');
 
     // Se houver um valor armazenado, atualize o conteúdo do elemento "clubeInfo"
 
@@ -238,14 +238,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Converta os dados para JSON e salve no localStorage
-        localStorage.setItem('dadosTabela', JSON.stringify(dados));
+        localStorage.setItem('dadosTabela2', JSON.stringify(dados));
     }
 
 
     // Função para carregar os dados da tabela do localStorage
     function carregarDadosLocalStorage() {
         // Verifique se há dados no localStorage
-        var dadosArmazenados = localStorage.getItem('dadosTabela');
+        var dadosArmazenados = localStorage.getItem('dadosTabela2');
 
         if (dadosArmazenados) {
             // Converta os dados de volta para um array
