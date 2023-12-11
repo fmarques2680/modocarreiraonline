@@ -473,11 +473,11 @@ document.addEventListener("DOMContentLoaded", function () {
     function addPlayerToTable(playerData) {
         const playerName = playerData[0];
 
-        // Verifica se o jogador já está na tabela
-        if (isPlayerInTable(playerName)) {
-            console.log('Jogador já está na tabela');
-            return;
-        }
+        // // Verifica se o jogador já está na tabela
+        // if (isPlayerInTable(playerName)) {
+        //     console.log('Jogador já está na tabela');
+        //     return;
+        // }
 
         //INSERÇÃO DE LINHA E CÉLULAS À TABELA
         const newRow = elencoBody.insertRow(); // Insere uma nova linha ('<tr>') à tabela
