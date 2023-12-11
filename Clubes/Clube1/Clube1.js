@@ -126,17 +126,22 @@ document.addEventListener("DOMContentLoaded", function () {
             body: JSON.stringify(objeto)
         };
 
-        fetch('https://backendmco.vercel.app/api', {
-            method: 'PUT',
-            mode: 'cors',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ key: 'value' }),
+        fetch('https://backendmco.vercel.app/api', options)
+        .then(response => response.json())
+        .then(response => {
+            const objeto = response;
+            const options = {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json', 'User-Agent': 'insomnia/8.4.5' },
+                body: JSON.stringify(objeto)
+            };
+    
+            return fetch('https://backendmco.vercel.app/api', options);
         })
         .then(response => response.json())
         .then(data => console.log(data))
         .catch(error => console.error('Erro:', error));
+    
     }
 
 
