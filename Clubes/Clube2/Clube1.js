@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Salva o valor do clube na página:
     // Recupere o valor armazenado na chave "clubeSelecionado" do Local Storage
-    var clubeSelecionado = localStorage.getItem('clubeSelecionado2');
+    var clubeSelecionado = localStorage.getItem('clubeSelecionado1');
 
     // Se houver um valor armazenado, atualize o conteúdo do elemento "clubeInfo"
 
@@ -290,7 +290,6 @@ document.addEventListener("DOMContentLoaded", function () {
             temporadaAtual.textContent = textoTemporadaAtual + " " + anoAtual + "/" + (anoAtual + 1);
         }
     }
-
 
 
 
@@ -474,7 +473,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const playerName = playerData[0];
 
         // // Verifica se o jogador já está na tabela
-        // if (isPlayerInTable(playerName)) {
+        // // if (isPlayerInTable(playerName)) {
         //     console.log('Jogador já está na tabela');
         //     return;
         // }
@@ -842,7 +841,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     //ANO INICIAL DO UNIVERSO
-    let anoAtual2 = parseInt(localStorage.getItem('anoAtual2')) || 2023;
+    let anoAtual = parseInt(localStorage.getItem('anoAtual')) || 2023;
 
     const temporadaAtual = document.getElementById("id-temporadaAtual"); //Temporada atual
 
@@ -1512,8 +1511,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Atualização da temporada atual:
     botaoFimTemporada.addEventListener("click", () => {
-        anoAtual2++;
-        temporadaAtual.textContent = "Temporada" + " " + anoAtual2 + "/" + (anoAtual2 + 1);
+        anoAtual++;
+        temporadaAtual.textContent = "Temporada" + " " + anoAtual + "/" + (anoAtual + 1);
 
         // Obtenha a tabela e suas linhas
         var tabela = document.getElementById('elenco-table');
@@ -1534,8 +1533,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // Salva o anoAtual2 no localStorage
-        localStorage.setItem('anoAtual2', anoAtual2);
+        // Salva o anoAtual no localStorage
+        localStorage.setItem('anoAtual', anoAtual);
 
         atualizarPace();
 
