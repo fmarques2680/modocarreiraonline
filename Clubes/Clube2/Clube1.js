@@ -242,54 +242,58 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // Função para carregar os dados da tabela do localStorage
-    function carregarDadosLocalStorage() {
-        // Verifique se há dados no localStorage
-        var dadosArmazenados = localStorage.getItem('dadosTabela2');
+// Função para carregar os dados da tabela do localStorage
+function carregarDadosLocalStorage() {
+    // Verifique se há dados no localStorage
+    var dadosArmazenados = localStorage.getItem('dadosTabela2');
 
-        if (dadosArmazenados) {
-            // Converta os dados de volta para um array
-            var dados = JSON.parse(dadosArmazenados);
+    if (dadosArmazenados) {
+        // Converta os dados de volta para um array
+        var dados = JSON.parse(dadosArmazenados);
 
-            // Obtenha a tabela
-            var tabela = document.getElementById('elenco-table');
-            var tbody = tabela.querySelector('tbody');
+        // Obtenha a tabela
+        var tabela = document.getElementById('elenco-table');
+        var tbody = tabela.querySelector('tbody');
 
-            // Remova todas as linhas existentes no corpo da tabela
-            tbody.innerHTML = '';
+        // Remova todas as linhas existentes no corpo da tabela
+        tbody.innerHTML = '';
 
-            // Itere sobre os dados e adicione as linhas ao corpo da tabela
-            for (var i = 0; i < dados.length; i++) {
-                var linha = tbody.insertRow(-1);
+        // Itere sobre os dados e adicione as linhas ao corpo da tabela
+        for (var i = 0; i < dados.length; i++) {
+            var linha = tbody.insertRow(-1);
 
-                for (var j = 0; j < dados[i].length; j++) {
-                    var celula = linha.insertCell(j);
-                    celula.innerText = dados[i][j];
-                }
+            for (var j = 0; j < dados[i].length; j++) {
+                var celula = linha.insertCell(j);
+                celula.innerText = dados[i][j];
+            }
 
-                // Adicione as classes de formatação condicional diretamente nas células
-                var posicaoCell = linha.cells[0];
-                var ovrCell = linha.cells[1];
-                var paceCell = linha.cells[8];
-                var clubeCell = linha.cells[9];
+            // Adicione as classes de formatação condicional diretamente nas células
+            var posicaoCell = linha.cells[0];
+            var ovrCell = linha.cells[1];
+            var paceCell = linha.cells[8];
+            var clubeCell = linha.cells[9];
 
-
+            try {
                 aplicarFormatacaoCondicional(posicaoCell, ovrCell);
                 aplicarFormatacaoCondicional2(paceCell, clubeCell);
+            } catch (error) {
+                console.error('Erro ao aplicar formatação condicional:', error.message);
             }
         }
-
-        // Carregar a variável anoAtual2 do localStorage
-        var anoAtual2 = parseInt(localStorage.getItem('anoAtual2')) || 2023;
-
-        // Atualizar a temporada atual
-        const temporadaAtual = document.getElementById("id-temporadaAtual");
-        var textoTemporadaAtual = temporadaAtual.textContent;
-
-        if (temporadaAtual) {
-            temporadaAtual.textContent = textoTemporadaAtual + " " + anoAtual2 + "/" + (anoAtual2 + 1);
-        }
     }
+
+    // Carregar a variável anoAtual2 do localStorage
+    var anoAtual2 = parseInt(localStorage.getItem('anoAtual2')) || 2023;
+
+    // Atualizar a temporada atual
+    const temporadaAtual = document.getElementById("id-temporadaAtual");
+    var textoTemporadaAtual = temporadaAtual.textContent;
+
+    if (temporadaAtual) {
+        temporadaAtual.textContent = textoTemporadaAtual + " " + anoAtual2 + "/" + (anoAtual2 + 1);
+    }
+}
+
 
 
 
