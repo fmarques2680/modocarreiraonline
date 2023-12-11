@@ -245,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Função para carregar os dados da tabela do localStorage
     function carregarDadosLocalStorage() {
         // Verifique se há dados no localStorage
-        var dadosArmazenados = localStorage.getItem('dadosTabela');
+        var dadosArmazenados = localStorage.getItem('dadosTabela2');
 
         if (dadosArmazenados) {
             // Converta os dados de volta para um array
