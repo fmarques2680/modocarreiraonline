@@ -82,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     carregarDados();
+    carregarDadosLocalStorage();
 
 
     function salvarDados() {
