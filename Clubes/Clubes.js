@@ -32,7 +32,21 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 })
 document.addEventListener("DOMContentLoaded", function () {
+    const botaoClubes = document.getElementById("id-linkClubeA")
+    botaoClubes.addEventListener("click", function () {
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube1/Clube1.html";
+        window.location.href = url;
+    })
+})
+document.addEventListener("DOMContentLoaded", function () {
     const botaoClubes = document.getElementById("id-linkClube2")
+    botaoClubes.addEventListener("click", function () {
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube2/Clube1.html";
+        window.location.href = url;
+    })
+})
+document.addEventListener("DOMContentLoaded", function () {
+    const botaoClubes = document.getElementById("id-linkClubeB")
     botaoClubes.addEventListener("click", function () {
         var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube2/Clube1.html";
         window.location.href = url;
@@ -41,55 +55,127 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const botaoClubes = document.getElementById("id-linkClube3")
     botaoClubes.addEventListener("click", function () {
-        window.location.href = "Clube 3/Clube1.html"
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube3/Clube1.html";
+        window.location.href = url;
+    })
+})
+document.addEventListener("DOMContentLoaded", function () {
+    const botaoClubes = document.getElementById("id-linkClubeC")
+    botaoClubes.addEventListener("click", function () {
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube3/Clube1.html";
+        window.location.href = url;
     })
 })
 document.addEventListener("DOMContentLoaded", function () {
     const botaoClubes = document.getElementById("id-linkClube4")
     botaoClubes.addEventListener("click", function () {
-        window.location.href = "Clube 4/Clube1.html"
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube4/Clube1.html";
+        window.location.href = url;
+    })
+})
+document.addEventListener("DOMContentLoaded", function () {
+    const botaoClubes = document.getElementById("id-linkClubeD")
+    botaoClubes.addEventListener("click", function () {
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube4/Clube1.html";
+        window.location.href = url;
     })
 })
 document.addEventListener("DOMContentLoaded", function () {
     const botaoClubes = document.getElementById("id-linkClube5")
     botaoClubes.addEventListener("click", function () {
-        window.location.href = "Clube 5/Clube1.html"
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube5/Clube1.html";
+        window.location.href = url;
+    })
+})
+document.addEventListener("DOMContentLoaded", function () {
+    const botaoClubes = document.getElementById("id-linkClubeE")
+    botaoClubes.addEventListener("click", function () {
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube5/Clube1.html";
+        window.location.href = url;
     })
 })
 document.addEventListener("DOMContentLoaded", function () {
     const botaoClubes = document.getElementById("id-linkClube6")
     botaoClubes.addEventListener("click", function () {
-        window.location.href = "Clube 6/Clube1.html"
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube6/Clube1.html";
+        window.location.href = url;
+    })
+})
+document.addEventListener("DOMContentLoaded", function () {
+    const botaoClubes = document.getElementById("id-linkClubeF")
+    botaoClubes.addEventListener("click", function () {
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube6/Clube1.html";
+        window.location.href = url;
     })
 })
 document.addEventListener("DOMContentLoaded", function () {
     const botaoClubes = document.getElementById("id-linkClube7")
     botaoClubes.addEventListener("click", function () {
-        window.location.href = "Clube 7/Clube1.html"
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube7/Clube1.html";
+        window.location.href = url;
+    })
+})
+document.addEventListener("DOMContentLoaded", function () {
+    const botaoClubes = document.getElementById("id-linkClubeG")
+    botaoClubes.addEventListener("click", function () {
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube7/Clube1.html";
+        window.location.href = url;
     })
 })
 document.addEventListener("DOMContentLoaded", function () {
     const botaoClubes = document.getElementById("id-linkClube8")
     botaoClubes.addEventListener("click", function () {
-        window.location.href = "Clube 8/Clube1.html"
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube8/Clube1.html";
+        window.location.href = url;
+    })
+})
+document.addEventListener("DOMContentLoaded", function () {
+    const botaoClubes = document.getElementById("id-linkClubeH")
+    botaoClubes.addEventListener("click", function () {
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube8/Clube1.html";
+        window.location.href = url;
     })
 })
 document.addEventListener("DOMContentLoaded", function () {
     const botaoClubes = document.getElementById("id-linkClube9")
     botaoClubes.addEventListener("click", function () {
-        window.location.href = "Clube 9/Clube1.html"
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube9/Clube1.html";
+        window.location.href = url;
+    })
+})
+document.addEventListener("DOMContentLoaded", function () {
+    const botaoClubes = document.getElementById("id-linkClubeI")
+    botaoClubes.addEventListener("click", function () {
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube9/Clube1.html";
+        window.location.href = url;
     })
 })
 document.addEventListener("DOMContentLoaded", function () {
     const botaoClubes = document.getElementById("id-linkClube10")
     botaoClubes.addEventListener("click", function () {
-        window.location.href = "Clube 10/Clube1.html"
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube10/Clube1.html";
+        window.location.href = url;
+    })
+})
+document.addEventListener("DOMContentLoaded", function () {
+    const botaoClubes = document.getElementById("id-linkClubeJ")
+    botaoClubes.addEventListener("click", function () {
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube10/Clube1.html";
+        window.location.href = url;
     })
 })
 document.addEventListener("DOMContentLoaded", function () {
     const botaoClubes = document.getElementById("id-linkClube11")
     botaoClubes.addEventListener("click", function () {
-        window.location.href = "Clube 11/Clube1.html"
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube11/Clube1.html";
+        window.location.href = url;
+    })
+})
+document.addEventListener("DOMContentLoaded", function () {
+    const botaoClubes = document.getElementById("id-linkClubeK")
+    botaoClubes.addEventListener("click", function () {
+        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clube11/Clube1.html";
+        window.location.href = url;
     })
 })
 

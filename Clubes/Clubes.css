@@ -34,7 +34,9 @@ header {
 
     width: 100vw;
 
-    justify-content: space-between
+    justify-content: space-between;
+
+    margin-bottom: 2vw;
 }
 
     .class-botaoMenuPrincipal {
@@ -150,7 +152,7 @@ header {
     align-items: center;
 
     width: 100%;
-    margin-top: 1.5vw;
+    margin-top: 0vw;
 }
 
 
@@ -165,6 +167,8 @@ header {
     }
 
         .class-botaoEditar {
+            display: none;
+
             background-color: white;
 
             width: 5vw;
@@ -185,13 +189,28 @@ header {
                 background-color: rgb(237, 236, 236);
             }
 
+        .logoClube {
+            padding-left: 9vw;
+            width: 4vw;
+            margin: 0.5vw;
+
+            cursor: pointer;
+        }
+
         .class-clubeSelecionado {
             display: flex;
+
+            width: 50%;
 
             align-items: center;
 
             font-size: 1.5vw;
+
+            cursor: pointer;
         }
+            .class-clubeSelecionado:hover {
+                font-weight: bold;
+            }
 
         .class-linkClube {
             background-color: white;
