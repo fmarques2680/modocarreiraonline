@@ -127,7 +127,6 @@ main {
     display: flex;
     flex-direction: row;
 
-    margin-top: 0.5vw;
     width: 100%;
 
     justify-content: space-between
@@ -501,3 +500,41 @@ main {
     /*#parteAltura {
         
     }*/
+
+
+
+/*NOME DO CLUBE*/
+#clubeInfo {
+    display: flex;
+    flex-direction: row;
+
+    background: radial-gradient(circle at center, rgb(6, 164, 6), black);
+
+    justify-content: center;
+
+    width: 100%;
+
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+
+    text-align: center;
+    font-size: 5vw;
+}
+
+    .logoClube {
+        height: 10vw;
+        
+        align-items: center;
+        justify-content: center;
+    }
+
+    .class-clubeSelecionado {
+        display: flex;
+
+        margin: 0;
+        margin-left: 1vw;
+
+        align-items: center;
+
+        font-size: 5vw;
+    }

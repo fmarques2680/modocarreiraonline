@@ -117,14 +117,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     
     //NOME DO CLUBE
-    window.addEventListener("load", function () {
+    // window.addEventListener("load", function () {
         
-        if (clubeSelecionado8 !== null) {
-            var divclubeSelecionado8 = document.getElementById("clubeInfo");
+    //     if (clubeSelecionado8 !== null) {
+    //         var divclubeSelecionado8 = document.getElementById("clubeInfo");
 
-            divclubeSelecionado8.innerText = clubeSelecionado8;
-        }
-    });
+    //         divclubeSelecionado8.innerText = clubeSelecionado8;
+    //     }
+    // });
 
     const clubeInfo = document.getElementById("clubeInfo");
 
