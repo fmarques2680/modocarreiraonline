@@ -1,5 +1,53 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    function carregarDados() {
+        const options = { method: 'GET', headers: { 'User-Agent': 'insomnia/8.4.5' } };
+    
+        fetch('https://backendmco.vercel.app/api', options)
+            .then(response => response.json())
+            .then(response => {
+                const objeto = response
+                localStorage.setItem('dadosTabela', JSON.stringify(objeto.dadosTabela));
+                localStorage.setItem('dadosTabela2', JSON.stringify(objeto.dadosTabela2));
+                localStorage.setItem('dadosTabela3', JSON.stringify(objeto.dadosTabela3));
+                localStorage.setItem('dadosTabela4', JSON.stringify(objeto.dadosTabela4));
+                localStorage.setItem('dadosTabela5', JSON.stringify(objeto.dadosTabela5));
+                localStorage.setItem('dadosTabela6', JSON.stringify(objeto.dadosTabela6));
+                localStorage.setItem('dadosTabela7', JSON.stringify(objeto.dadosTabela7));
+                localStorage.setItem('dadosTabela8', JSON.stringify(objeto.dadosTabela8));
+                localStorage.setItem('dadosTabela9', JSON.stringify(objeto.dadosTabela9));
+                localStorage.setItem('dadosTabela10', JSON.stringify(objeto.dadosTabela10));
+                localStorage.setItem('dadosTabela11', JSON.stringify(objeto.dadosTabela11));
+                localStorage.setItem('anoAtual', JSON.stringify(objeto.anoAtual));
+                localStorage.setItem('anoAtual2', JSON.stringify(objeto.anoAtual2));
+                localStorage.setItem('anoAtual3', JSON.stringify(objeto.anoAtual3));
+                localStorage.setItem('anoAtual4', JSON.stringify(objeto.anoAtual4));
+                localStorage.setItem('anoAtual5', JSON.stringify(objeto.anoAtual5));
+                localStorage.setItem('anoAtual6', JSON.stringify(objeto.anoAtual6));
+                localStorage.setItem('anoAtual7', JSON.stringify(objeto.anoAtual7));
+                localStorage.setItem('anoAtual8', JSON.stringify(objeto.anoAtual8));
+                localStorage.setItem('anoAtual9', JSON.stringify(objeto.anoAtual9));
+                localStorage.setItem('anoAtual10', JSON.stringify(objeto.anoAtual10));
+                localStorage.setItem('anoAtual11', JSON.stringify(objeto.anoAtual11));
+                localStorage.setItem('clubeSelecionado1', JSON.stringify(objeto.clubeSelecionado1));
+                localStorage.setItem('clubeSelecionado2', JSON.stringify(objeto.clubeSelecionado2));
+                localStorage.setItem('clubeSelecionado3', JSON.stringify(objeto.clubeSelecionado3));
+                localStorage.setItem('clubeSelecionado4', JSON.stringify(objeto.clubeSelecionado4));
+                localStorage.setItem('clubeSelecionado5', JSON.stringify(objeto.clubeSelecionado5));
+                localStorage.setItem('clubeSelecionado6', JSON.stringify(objeto.clubeSelecionado6));
+                localStorage.setItem('clubeSelecionado7', JSON.stringify(objeto.clubeSelecionado7));
+                localStorage.setItem('clubeSelecionado8', JSON.stringify(objeto.clubeSelecionado8));
+                localStorage.setItem('clubeSelecionado9', JSON.stringify(objeto.clubeSelecionado9));
+                localStorage.setItem('clubeSelecionado10', JSON.stringify(objeto.clubeSelecionado10));
+                localStorage.setItem('clubeSelecionado11', JSON.stringify(objeto.clubeSelecionado11));
+            })
+            .catch(err => console.error(err));
+    }
+    
+    carregarDados();
+    //carregarDadosLocalStorage();
+
+
     function salvarDados() {
         const objeto = {
             dadosTabela: JSON.parse(localStorage.getItem('dadosTabela')),
@@ -59,6 +107,48 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error('Erro:', error));
     
     }
+
+
+
+    // Função para carregar os dados da tabela do localStorage
+    function carregarDadosLocalStorage() {
+        // Verifique se há dados no localStorage
+        var dadosArmazenados = localStorage.getItem('dadosTabela');
+
+        if (dadosArmazenados) {
+            // Converta os dados de volta para um array
+            var dados = JSON.parse(dadosArmazenados);
+
+            // Obtenha a tabela
+            var tabela = document.getElementById('elenco-table');
+            var tbody = tabela.querySelector('tbody');
+
+            // Remova todas as linhas existentes no corpo da tabela
+            tbody.innerHTML = '';
+
+            // Itere sobre os dados e adicione as linhas ao corpo da tabela
+            for (var i = 0; i < dados.length; i++) {
+                var linha = tbody.insertRow(-1);
+
+                for (var j = 0; j < dados[i].length; j++) {
+                    var celula = linha.insertCell(j);
+                    celula.innerText = dados[i][j];
+                }
+
+                // Adicione as classes de formatação condicional diretamente nas células
+                var posicaoCell = linha.cells[0];
+                var ovrCell = linha.cells[1];
+                var paceCell = linha.cells[8];
+                var clubeCell = linha.cells[9];
+
+
+                //aplicarFormatacaoCondicional(posicaoCell, ovrCell);
+                //aplicarFormatacaoCondicional2(paceCell, clubeCell);
+            }
+        }
+    }
+
+
 
 
     
@@ -125,47 +215,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-//FINALIZAR CLICANDO NO BOTÃO "OK"
+// FINALIZAR CLICANDO NO BOTÃO "OK"
+const finalizarTudo = document.getElementById("id-botaoFecharTudo");
 
-    const finalizarTudo = document.getElementById("id-botaoFecharTudo");
+finalizarTudo.addEventListener("click", function () {
+    // Função para extrair apenas dígitos de uma string
+    function extrairNumeros(str) {
+        return str.match(/\d+/g).map(Number);
+    }
 
-    finalizarTudo.addEventListener("click", function() {
-        // Função para extrair apenas dígitos de uma string
-        function extrairNumeros(str) {
-            return str.match(/\d+/g).map(Number);
-        }
+    // Criar um array com o conteúdo
+    var novoItem = [
+        divInfoPosicao.textContent,
+        divInfoOVRF.textContent,
+        divInfoNomeConhecidoF.textContent,
+        divInfoNacionalidadeF.textContent,
+        extrairNumeros(divInfoIdadeF.textContent)[0], // Use apenas o primeiro número
+        divInfoAlturaF.textContent,
+        divInfoPesoF.textContent,
+        divInfoInvestimentoF.textContent,
+        divInfoPaceF.textContent,
+        clubeInfo.textContent.trim(), // Remova espaços extras no início e no final
+    ];
 
-        // Criar um array com o conteúdo
-        var novoItem = [
-            divInfoPosicao.textContent,
-            divInfoOVRF.textContent,
-            divInfoNomeConhecidoF.textContent,
-            divInfoNacionalidadeF.textContent,
-            extrairNumeros(divInfoIdadeF.textContent),
-            divInfoAlturaF.textContent,
-            divInfoPesoF.textContent,
-            divInfoInvestimentoF.textContent,
-            divInfoPaceF.textContent,
-            clubeInfo.textContent
-        ];
+    // Obter dados existentes do localStorage
+    var dadosTabela = JSON.parse(localStorage.getItem('dadosTabela')) || [];
 
-        // Obter dados existentes do localStorage
-        var dadosTabela = JSON.parse(localStorage.getItem('dadosTabela')) || [];
+    // Adicionar o novo item ao array
+    dadosTabela.push(novoItem);
 
-        // Adicionar o novo item ao array
-        dadosTabela.push(novoItem);
+    // Armazenar de volta no localStorage
+    localStorage.setItem('dadosTabela', JSON.stringify(dadosTabela));
 
-        // Armazenar de volta no localStorage
-        localStorage.setItem('dadosTabela', JSON.stringify(dadosTabela));
-
-    });
+    salvarDados();
+});
 
 
-    const finalizar = document.getElementById("finalizar")
 
-    finalizar.addEventListener("click", function () {
-        salvarDados();
-    });
+
+    // const finalizar = document.getElementById("finalizar")
+
+    // finalizar.addEventListener("click", function () {
+    //     salvarDados();
+    // });
 
 
 
