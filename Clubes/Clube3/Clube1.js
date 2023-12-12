@@ -184,15 +184,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    //NOME DO CLUBE
-    window.addEventListener("load", function () {
+    // //NOME DO CLUBE
+    // window.addEventListener("load", function () {
 
-        if (clubeSelecionado !== null) {
-            var divclubeSelecionado = document.getElementById("clubeInfo");
+    //     if (clubeSelecionado !== null) {
+    //         var divclubeSelecionado = document.getElementById("clubeInfo");
 
-            divclubeSelecionado.innerText = clubeSelecionado;
-        }
-    });
+    //         divclubeSelecionado.innerText = clubeSelecionado;
+    //     }
+    // });
 
 
 
@@ -494,7 +494,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const cellClube = newRow.insertCell(9);
         cellClube.style.display = 'none';
 
-        var clubeInfoElement = document.getElementById('clubeInfo');
+        var clubeInfoElement = document.getElementById('id-linkClube1');
         var conteudoClubeInfo = clubeInfoElement.textContent;
 
         //ESPECIFICAÇÃO DA INFORMAÇÃO "POSIÇÃO"

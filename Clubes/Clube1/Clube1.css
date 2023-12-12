@@ -106,19 +106,50 @@ main {
             font-style: italic;
         }
 
-            #id-botaoClubes {
-                /*background-color: hsl(0, 0%, 71%);*/
-                background: linear-gradient(to top, #b9b9b9, rgb(97, 97, 97));
-            }
+            
 
 
 
 /*CONTEÚDO DA PÁGINA*/
 /*NOME DO CLUBE*/
 #clubeInfo {
+    display: flex;
+    flex-direction: row;
+
+    background: radial-gradient(circle at center, white, rgb(181, 22, 22));
+
+    justify-content: center;
+
+    width: 100%;
+
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+
     text-align: center;
     font-size: 5vw;
 }
+
+    .logoClube {
+        height: 10vw;
+        
+        align-items: center;
+        justify-content: center;
+    }
+
+    .class-clubeSelecionado {
+        display: flex;
+
+        margin: 0;
+        margin-left: 1vw;
+
+        align-items: center;
+
+        font-size: 5vw;
+    }
+
+
+
+
 
 
 
@@ -127,7 +158,7 @@ main {
     display: flex;
     flex-direction: row;
 
-    margin-top: 0.5vw;
+    
     width: 100%;
 
     justify-content: space-between
