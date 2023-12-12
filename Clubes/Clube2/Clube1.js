@@ -222,23 +222,24 @@ document.addEventListener("DOMContentLoaded", function () {
         var tabela = document.getElementById('elenco-table');
         var linhas = tabela.getElementsByTagName('tr');
 
-        // Certifique-se de que há pelo menos uma linha na tabela
-        if (linhas.length > 1) {
-            var colunas = linhas[1].getElementsByTagName('td'); // Use a primeira linha
+        // Crie um array para armazenar os dados
+        var dados = [];
 
-            // Crie um array para armazenar os dados
-            var dados = [];
+        // Itere sobre as linhas e salve os dados em um array
+        for (var i = 1; i < linhas.length; i++) {
+            var colunas = linhas[i].getElementsByTagName('td');
+            var linhaDados = [];
 
-            // Itere sobre as colunas e salve os dados em um array
             for (var j = 0; j < colunas.length; j++) {
-                dados.push(colunas[j].innerText);
+                linhaDados.push(colunas[j].innerText);
             }
 
-            // Converta os dados para JSON e salve no localStorage
-            localStorage.setItem('dadosTabela2', JSON.stringify([dados])); // Armazene como um array com uma única linha
+            dados.push(linhaDados);
         }
-    }
 
+        // Converta os dados para JSON e salve no localStorage
+        localStorage.setItem('dadosTabela2', JSON.stringify(dados));
+    }
 
 
     // Função para carregar os dados da tabela do localStorage
@@ -273,8 +274,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 var clubeCell = linha.cells[9];
 
 
-                //aplicarFormatacaoCondicional(posicaoCell, ovrCell);
-                //aplicarFormatacaoCondicional2(paceCell, clubeCell);
+                aplicarFormatacaoCondicional(posicaoCell, ovrCell);
+                aplicarFormatacaoCondicional2(paceCell, clubeCell);
             }
         }
 
@@ -471,11 +472,11 @@ document.addEventListener("DOMContentLoaded", function () {
     function addPlayerToTable(playerData) {
         const playerName = playerData[0];
 
-        // // Verifica se o jogador já está na tabela
-        // // if (isPlayerInTable(playerName)) {
-        //     console.log('Jogador já está na tabela');
-        //     return;
-        // }
+        // Verifica se o jogador já está na tabela
+        if (isPlayerInTable(playerName)) {
+            console.log('Jogador já está na tabela');
+            return;
+        }
 
         //INSERÇÃO DE LINHA E CÉLULAS À TABELA
         const newRow = elencoBody.insertRow(); // Insere uma nova linha ('<tr>') à tabela

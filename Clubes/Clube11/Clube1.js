@@ -1,7 +1,89 @@
-//LINKS PARA AS PÁGINAS
-//Link para Clubes
 document.addEventListener("DOMContentLoaded", function () {
+
+    // // Exemplo de requisição GET
+    // fetch('https://backendmco.vercel.app/api', {
+    //     method: 'GET',
+    //     mode: 'cors',
+    // })
+    // .then(response => response.json())
+    // .then(data => console.log(data))
+    // .catch(error => console.error('Erro:', error));
+
+    // // Exemplo de requisição POST
+    // fetch('https://backendmco.vercel.app/api', {
+    //     method: 'POST',
+    //     mode: 'cors',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ key: 'value' }),
+    // })
+    // .then(response => response.json())
+    // .then(data => console.log(data))
+    // .catch(error => console.error('Erro:', error));
+
+    // // Exemplo de requisição PUT
+    // fetch('https://backendmco.vercel.app/api', {
+    //     method: 'PUT',
+    //     mode: 'cors',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ key: 'new value' }),
+    // })
+    // .then(response => response.json())
+    // .then(data => console.log(data))
+    // .catch(error => console.error('Erro:', error));
+
+
+
+    function carregarDados() {
+        const options = { method: 'GET', headers: { 'User-Agent': 'insomnia/8.4.5' } };
     
+        fetch('https://backendmco.vercel.app/api', options)
+            .then(response => response.json())
+            .then(response => {
+                const objeto = response
+                localStorage.setItem('dadosTabela', JSON.stringify(objeto.dadosTabela));
+                localStorage.setItem('dadosTabela2', JSON.stringify(objeto.dadosTabela2));
+                localStorage.setItem('dadosTabela3', JSON.stringify(objeto.dadosTabela3));
+                localStorage.setItem('dadosTabela4', JSON.stringify(objeto.dadosTabela4));
+                localStorage.setItem('dadosTabela5', JSON.stringify(objeto.dadosTabela5));
+                localStorage.setItem('dadosTabela6', JSON.stringify(objeto.dadosTabela6));
+                localStorage.setItem('dadosTabela7', JSON.stringify(objeto.dadosTabela7));
+                localStorage.setItem('dadosTabela8', JSON.stringify(objeto.dadosTabela8));
+                localStorage.setItem('dadosTabela9', JSON.stringify(objeto.dadosTabela9));
+                localStorage.setItem('dadosTabela10', JSON.stringify(objeto.dadosTabela10));
+                localStorage.setItem('dadosTabela11', JSON.stringify(objeto.dadosTabela11));
+                localStorage.setItem('anoAtual', JSON.stringify(objeto.anoAtual));
+                localStorage.setItem('anoAtual2', JSON.stringify(objeto.anoAtual2));
+                localStorage.setItem('anoAtual3', JSON.stringify(objeto.anoAtual3));
+                localStorage.setItem('anoAtual4', JSON.stringify(objeto.anoAtual4));
+                localStorage.setItem('anoAtual5', JSON.stringify(objeto.anoAtual5));
+                localStorage.setItem('anoAtual6', JSON.stringify(objeto.anoAtual6));
+                localStorage.setItem('anoAtual7', JSON.stringify(objeto.anoAtual7));
+                localStorage.setItem('anoAtual8', JSON.stringify(objeto.anoAtual8));
+                localStorage.setItem('anoAtual9', JSON.stringify(objeto.anoAtual9));
+                localStorage.setItem('anoAtual10', JSON.stringify(objeto.anoAtual10));
+                localStorage.setItem('anoAtual11', JSON.stringify(objeto.anoAtual11));
+                localStorage.setItem('clubeSelecionado1', JSON.stringify(objeto.clubeSelecionado1));
+                localStorage.setItem('clubeSelecionado2', JSON.stringify(objeto.clubeSelecionado2));
+                localStorage.setItem('clubeSelecionado3', JSON.stringify(objeto.clubeSelecionado3));
+                localStorage.setItem('clubeSelecionado4', JSON.stringify(objeto.clubeSelecionado4));
+                localStorage.setItem('clubeSelecionado5', JSON.stringify(objeto.clubeSelecionado5));
+                localStorage.setItem('clubeSelecionado6', JSON.stringify(objeto.clubeSelecionado6));
+                localStorage.setItem('clubeSelecionado7', JSON.stringify(objeto.clubeSelecionado7));
+                localStorage.setItem('clubeSelecionado8', JSON.stringify(objeto.clubeSelecionado8));
+                localStorage.setItem('clubeSelecionado9', JSON.stringify(objeto.clubeSelecionado9));
+                localStorage.setItem('clubeSelecionado10', JSON.stringify(objeto.clubeSelecionado10));
+                localStorage.setItem('clubeSelecionado11', JSON.stringify(objeto.clubeSelecionado11));
+            })
+            .catch(err => console.error(err));
+    }
+    
+    carregarDados();
+    carregarDadosLocalStorage();
+
 
     function salvarDados() {
         const objeto = {
@@ -41,64 +123,39 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         const options = {
             method: 'PUT',
-            headers: {'Content-Type': 'application/json', 'User-Agent': 'insomnia/8.4.5'},
+            headers: { 'Content-Type': 'application/json', 'User-Agent': 'insomnia/8.4.5' },
             body: JSON.stringify(objeto)
-          };
-          
-          fetch('http://localhost:3000/', options)
-            .then(response => response.json())
-            .then(response => console.log(response))
-            .catch(err => console.error(err));
-    }
+        };
 
-    function carregarDados () {
-        const options = {method: 'GET', headers: {'User-Agent': 'insomnia/8.4.5'}};
-
-        fetch('http://localhost:3000/', options)
+        fetch('https://backendmco.vercel.app/api', options)
         .then(response => response.json())
         .then(response => {
-            const objeto = response
-            localStorage.setItem('dadosTabela', JSON.stringify(objeto.dadosTabela));
-            localStorage.setItem('dadosTabela2', JSON.stringify(objeto.dadosTabela2));
-            localStorage.setItem('dadosTabela3', JSON.stringify(objeto.dadosTabela3));
-            localStorage.setItem('dadosTabela4', JSON.stringify(objeto.dadosTabela4));
-            localStorage.setItem('dadosTabela5', JSON.stringify(objeto.dadosTabela5));
-            localStorage.setItem('dadosTabela6', JSON.stringify(objeto.dadosTabela6));
-            localStorage.setItem('dadosTabela7', JSON.stringify(objeto.dadosTabela7));
-            localStorage.setItem('dadosTabela8', JSON.stringify(objeto.dadosTabela8));
-            localStorage.setItem('dadosTabela9', JSON.stringify(objeto.dadosTabela9));
-            localStorage.setItem('dadosTabela10', JSON.stringify(objeto.dadosTabela10));
-            localStorage.setItem('dadosTabela11', JSON.stringify(objeto.dadosTabela11));
-            localStorage.setItem('anoAtual', JSON.stringify(objeto.anoAtual));
-            localStorage.setItem('anoAtual2', JSON.stringify(objeto.anoAtual2));
-            localStorage.setItem('anoAtual3', JSON.stringify(objeto.anoAtual3));
-            localStorage.setItem('anoAtual4', JSON.stringify(objeto.anoAtual4));
-            localStorage.setItem('anoAtual5', JSON.stringify(objeto.anoAtual5));
-            localStorage.setItem('anoAtual6', JSON.stringify(objeto.anoAtual6));
-            localStorage.setItem('anoAtual7', JSON.stringify(objeto.anoAtual7));
-            localStorage.setItem('anoAtual8', JSON.stringify(objeto.anoAtual8));
-            localStorage.setItem('anoAtual9', JSON.stringify(objeto.anoAtual9));
-            localStorage.setItem('anoAtual10', JSON.stringify(objeto.anoAtual10));
-            localStorage.setItem('anoAtual11', JSON.stringify(objeto.anoAtual11));
-            localStorage.setItem('clubeSelecionado1', JSON.stringify(objeto.clubeSelecionado1));
-            localStorage.setItem('clubeSelecionado2', JSON.stringify(objeto.clubeSelecionado2));
-            localStorage.setItem('clubeSelecionado3', JSON.stringify(objeto.clubeSelecionado3));
-            localStorage.setItem('clubeSelecionado4', JSON.stringify(objeto.clubeSelecionado4));
-            localStorage.setItem('clubeSelecionado5', JSON.stringify(objeto.clubeSelecionado5));
-            localStorage.setItem('clubeSelecionado6', JSON.stringify(objeto.clubeSelecionado6));
-            localStorage.setItem('clubeSelecionado7', JSON.stringify(objeto.clubeSelecionado7));
-            localStorage.setItem('clubeSelecionado8', JSON.stringify(objeto.clubeSelecionado8));
-            localStorage.setItem('clubeSelecionado9', JSON.stringify(objeto.clubeSelecionado9));
-            localStorage.setItem('clubeSelecionado10', JSON.stringify(objeto.clubeSelecionado10));
-            localStorage.setItem('clubeSelecionado11', JSON.stringify(objeto.clubeSelecionado11));
+            const objeto = response;
+            const options = {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json', 'User-Agent': 'insomnia/8.4.5' },
+                body: JSON.stringify(objeto)
+            };
+    
+            return fetch('https://backendmco.vercel.app/api', options);
         })
-        .catch(err => console.error(err));
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Erro:', error));
+    
     }
+
+
+
+    const botaoSalvarPagina = document.getElementById("salvarPagina")
+
+    botaoSalvarPagina.addEventListener("click", function() {
+        salvarDados();
+    })
 
 
 
     
-    carregarDadosLocalStorage();
 
     const botaoClubes = document.getElementById("id-botaoClubes");
 
@@ -110,35 +167,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-//Link para Jogadores do Mundo
+    //Link para Jogadores do Mundo
     const botaoJogadoresMundo = document.getElementById("id-botaoJogadoresMundo");
 
     botaoJogadoresMundo.addEventListener("click", function () {
-        window.location.href = "../../../Jogadores do Mundo/JogadoresDoMundo.html";
+        var url = "https://fmarques2680.github.io/modocarreiraonline/JogadoresDoMundo/JogadoresDoMundo.html";
+        window.location.href = url;
     });
 
-//Link para Base
-const botaoBase = document.getElementById("id-botaoEmBreve-2");
+    //Link para Base
+    const botaoBase = document.getElementById("id-botaoEmBreve-2");
 
-botaoBase.addEventListener("click", function () {
-    window.location.href = "Base.html";
-});
+    botaoBase.addEventListener("click", function () {
+        window.location.href = "Base.html";
+    });
 
 
 
-//NOME DO CLUBE
-window.addEventListener("load", function () {
-    
-    if (clubeSelecionado6 !== null) {
-        var divclubeSelecionado6 = document.getElementById("clubeInfo");
+    //NOME DO CLUBE
+    window.addEventListener("load", function () {
 
-        divclubeSelecionado6.innerText = clubeSelecionado6;
-    }
-});
+        if (clubeSelecionado !== null) {
+            var divclubeSelecionado = document.getElementById("clubeInfo");
 
-    
+            divclubeSelecionado.innerText = clubeSelecionado;
+        }
+    });
 
-// LOCAL STORAGE
+
+
+    // LOCAL STORAGE
     // Recupere o valor do clube da URL:
     const urlParams = new URLSearchParams(window.location.search);
     const clube = urlParams.get("clube");
@@ -151,8 +209,8 @@ window.addEventListener("load", function () {
 
 
     //Salva o valor do clube na página:
-    // Recupere o valor armazenado na chave "clubeSelecionado6" do Local Storage
-    var clubeSelecionado6 = localStorage.getItem('clubeSelecionado6');
+    // Recupere o valor armazenado na chave "clubeSelecionado" do Local Storage
+    var clubeSelecionado = localStorage.getItem('clubeSelecionado1');
 
     // Se houver um valor armazenado, atualize o conteúdo do elemento "clubeInfo"
 
@@ -163,84 +221,84 @@ window.addEventListener("load", function () {
         // Obtenha a tabela e suas linhas
         var tabela = document.getElementById('elenco-table');
         var linhas = tabela.getElementsByTagName('tr');
-    
+
         // Crie um array para armazenar os dados
         var dados = [];
-    
+
         // Itere sobre as linhas e salve os dados em um array
         for (var i = 1; i < linhas.length; i++) {
-        var colunas = linhas[i].getElementsByTagName('td');
-        var linhaDados = [];
-    
-        for (var j = 0; j < colunas.length; j++) {
-            linhaDados.push(colunas[j].innerText);
+            var colunas = linhas[i].getElementsByTagName('td');
+            var linhaDados = [];
+
+            for (var j = 0; j < colunas.length; j++) {
+                linhaDados.push(colunas[j].innerText);
+            }
+
+            dados.push(linhaDados);
         }
-    
-        dados.push(linhaDados);
-        }
-    
+
         // Converta os dados para JSON e salve no localStorage
-        localStorage.setItem('dadosTabela6', JSON.stringify(dados));
+        localStorage.setItem('dadosTabela11', JSON.stringify(dados));
     }
 
 
     // Função para carregar os dados da tabela do localStorage
     function carregarDadosLocalStorage() {
         // Verifique se há dados no localStorage
-        var dadosArmazenados = localStorage.getItem('dadosTabela6');
-    
+        var dadosArmazenados = localStorage.getItem('dadosTabela11');
+
         if (dadosArmazenados) {
             // Converta os dados de volta para um array
             var dados = JSON.parse(dadosArmazenados);
-    
+
             // Obtenha a tabela
             var tabela = document.getElementById('elenco-table');
             var tbody = tabela.querySelector('tbody');
-    
+
             // Remova todas as linhas existentes no corpo da tabela
             tbody.innerHTML = '';
-    
+
             // Itere sobre os dados e adicione as linhas ao corpo da tabela
             for (var i = 0; i < dados.length; i++) {
                 var linha = tbody.insertRow(-1);
-    
+
                 for (var j = 0; j < dados[i].length; j++) {
                     var celula = linha.insertCell(j);
                     celula.innerText = dados[i][j];
                 }
-    
+
                 // Adicione as classes de formatação condicional diretamente nas células
                 var posicaoCell = linha.cells[0];
                 var ovrCell = linha.cells[1];
                 var paceCell = linha.cells[8];
                 var clubeCell = linha.cells[9];
-                
-    
+
+
                 aplicarFormatacaoCondicional(posicaoCell, ovrCell);
                 aplicarFormatacaoCondicional2(paceCell, clubeCell);
             }
         }
 
-        // Carregar a variável anoAtual6 do localStorage
-        var anoAtual6 = parseInt(localStorage.getItem('anoAtual6')) || 2023;
+        // Carregar a variável anoAtual do localStorage
+        var anoAtual = parseInt(localStorage.getItem('anoAtual')) || 2023;
 
         // Atualizar a temporada atual
         const temporadaAtual = document.getElementById("id-temporadaAtual");
         var textoTemporadaAtual = temporadaAtual.textContent;
 
         if (temporadaAtual) {
-            temporadaAtual.textContent = textoTemporadaAtual + " " + anoAtual6 + "/" + (anoAtual6 + 1);
+            temporadaAtual.textContent = textoTemporadaAtual + " " + anoAtual + "/" + (anoAtual + 1);
         }
     }
 
-    
+
 
     //Função da formatação condicional de Posição e OVR:
     function aplicarFormatacaoCondicional(posicaoCell, ovrCell) {
         // Obtenha os valores das células
         var valorCelulaPosicao = posicaoCell.textContent;
         var valorCelulaOVR = ovrCell.textContent;
-    
+
         // Adicione classes de formatação condicional
         if (valorCelulaPosicao === 'GK') {
             posicaoCell.classList.add('class-GK');
@@ -251,7 +309,7 @@ window.addEventListener("load", function () {
         } else if (valorCelulaPosicao === 'CF' || valorCelulaPosicao === 'RW' || valorCelulaPosicao === 'LW' || valorCelulaPosicao === 'ST') {
             posicaoCell.classList.add('class-ATA');
         }
-    
+
         if (valorCelulaOVR >= 1 && valorCelulaOVR <= 64) {
             ovrCell.classList.add('class-bronze');
         } else if (valorCelulaOVR >= 65 && valorCelulaOVR <= 74) {
@@ -260,55 +318,55 @@ window.addEventListener("load", function () {
             ovrCell.classList.add('class-gold');
         }
 
-        
+
     }
 
     function aplicarFormatacaoCondicional2(paceCell, clubeCell) {
         paceCell.classList.add('class-colunaPace');
         clubeCell.style.display = 'none';
     }
-    
-
-
-
-const modalFinalizaçaoTemporada = document.getElementById("id-modalFinalizarTemporada");
-const botaoAbrirModalFinalizaçaoTemporada = document.getElementById("id-botaoAbrirModalFinalizarTemporada");
-
-modalFinalizaçaoTemporada.style.display = 'block';
-
-botaoAbrirModalFinalizaçaoTemporada.addEventListener("click", function() {
-    modalFinalizaçaoTemporada.classList.add("visible");
-});
-
-
-
-//BOTÃO DE FINALIZAR TEMPORADA
-const botaoBModalFinalizarTemporada = document.getElementById("id-botaoBModalFinalizarTemporada");
-
-const textoConfirmaçaoFinalizarTemporada = document.getElementById("id-mensagemConfirmaçaoFinalizarTemporada");
-const botaoModalFinalizarTemporada = document.getElementById("id-botaoModalFinalizarTemporada");
-const botaoModalNaoFinalizarTemporada = document.getElementById("id-botaoModalNaoFinalizarTemporada");
-
-
-botaoBModalFinalizarTemporada.addEventListener("click", function() {
-    botaoModalFinalizarTemporada.classList.add("visible");
-    botaoModalNaoFinalizarTemporada.classList.add("visible");
-    textoConfirmaçaoFinalizarTemporada.classList.add("visible");
-});
-
-botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
-    botaoModalFinalizarTemporada.classList.remove("visible");
-    botaoModalNaoFinalizarTemporada.classList.remove("visible");
-    textoConfirmaçaoFinalizarTemporada.classList.remove("visible");
-});
 
 
 
 
+    const modalFinalizaçaoTemporada = document.getElementById("id-modalFinalizarTemporada");
+    const botaoAbrirModalFinalizaçaoTemporada = document.getElementById("id-botaoAbrirModalFinalizarTemporada");
+
+    modalFinalizaçaoTemporada.style.display = 'block';
+
+    botaoAbrirModalFinalizaçaoTemporada.addEventListener("click", function () {
+        modalFinalizaçaoTemporada.classList.add("visible");
+    });
 
 
 
-//TABELA DE ELENCO 
+    //BOTÃO DE FINALIZAR TEMPORADA
+    const botaoBModalFinalizarTemporada = document.getElementById("id-botaoBModalFinalizarTemporada");
+
+    const textoConfirmaçaoFinalizarTemporada = document.getElementById("id-mensagemConfirmaçaoFinalizarTemporada");
+    const botaoModalFinalizarTemporada = document.getElementById("id-botaoModalFinalizarTemporada");
+    const botaoModalNaoFinalizarTemporada = document.getElementById("id-botaoModalNaoFinalizarTemporada");
+
+
+    botaoBModalFinalizarTemporada.addEventListener("click", function () {
+        botaoModalFinalizarTemporada.classList.add("visible");
+        botaoModalNaoFinalizarTemporada.classList.add("visible");
+        textoConfirmaçaoFinalizarTemporada.classList.add("visible");
+    });
+
+    botaoModalNaoFinalizarTemporada.addEventListener("click", function () {
+        botaoModalFinalizarTemporada.classList.remove("visible");
+        botaoModalNaoFinalizarTemporada.classList.remove("visible");
+        textoConfirmaçaoFinalizarTemporada.classList.remove("visible");
+    });
+
+
+
+
+
+
+
+    //TABELA DE ELENCO 
     //INPUT INICIALMENTE
     const input = document.getElementById("id-input");
 
@@ -318,76 +376,76 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
 
     //BOTÃO DE ADICIONAR JOGADOR AO ELENCO
     const botaoAdicionarJogador = document.getElementById("id-botaoAdicionarJogadorElenco");
-    
+
     botaoAdicionarJogador.addEventListener("click", function () { // Função de exibir o input quando o botão for clicado
-            input.style.display = "block";
-        
-    
-    
-    //FUNÇÃO QUE MOSTRA SUGESTÕES
-    input.addEventListener('input', showSuggestions); // Ouvinte faz: respondendo ao evento 'input', 'showSuggestions' estará sendo chamada
-    
-    const suggestions = document.getElementById("suggestions");
+        input.style.display = "block";
 
 
-    function showSuggestions() {
 
-        const inputText = input.value; // Variável que armazena o valor do input
+        //FUNÇÃO QUE MOSTRA SUGESTÕES
+        input.addEventListener('input', showSuggestions); // Ouvinte faz: respondendo ao evento 'input', 'showSuggestions' estará sendo chamada
 
-        // Verifica se o comprimento do texto de entrada é pelo menos 3 caracteres
-        if (inputText.length < 3) {
-            suggestions.style.display = "none";
-            suggestions.innerHTML = "";
-            return; // Sai da função se o comprimento for inferior a 3 caracteres
+        const suggestions = document.getElementById("suggestions");
+
+
+        function showSuggestions() {
+
+            const inputText = input.value; // Variável que armazena o valor do input
+
+            // Verifica se o comprimento do texto de entrada é pelo menos 3 caracteres
+            if (inputText.length < 3) {
+                suggestions.style.display = "none";
+                suggestions.innerHTML = "";
+                return; // Sai da função se o comprimento for inferior a 3 caracteres
+            }
+
+            fetch('../../JogadoresEAFC.csv') // Faz uma solicitação ao arquivo CSV
+                .then(response => response.text()) // Resposta da solicitação convertida em texto
+                .then(data => {
+                    const lines = data.split('\n'); // Cada linha se torna um elemento
+                    const playersData = lines.slice(1).map(line => line.split(',')); // Ignora a 1ª linha e mapeia cada linha transformado-a em um array com elementos separados por vírgula
+                    const players = playersData.map(player => player[1]).filter(Boolean); // Cria um array chamado 'players' que contém os valores da coluna 2 e remove qualquer valor vazio
+
+                    if (inputText === "") { // Se o input estiver vazio...
+                        suggestions.style.display = "none";
+                        suggestions.innerHTML = ""; // Remove qualquer conteúdo do elemento de ID "suggestions"
+                    } else { // Se o input NÃO estiver vazio...
+                        suggestions.style.display = "block";
+                        suggestions.innerHTML = ""; // Remove qualquer conteúdo prévio do elemento de ID "suggestions" 
+
+                        players.forEach(player => { // Cria um loop que itera por todos os jogadores
+                            if (player.toLowerCase().includes(inputText.toLowerCase())) { // Verifica se o nome do jogador (em letras minúsculas) contém o texto digitado (em letras minúsculas)
+                                const suggestion = document.createElement('p'); // Cria um elemento <p> para exibir a sugestão do jogador
+                                suggestion.textContent = player; // Define o conteúdo do texto de 'suggestion'
+                                suggestion.addEventListener('click', () => {
+                                    input.value = player; // Define que, no click, o valor do input é o 'player'
+                                    suggestions.style.display = "none";
+                                    displayPlayerInfo(playersData, player);
+                                });
+                                suggestions.appendChild(suggestion); // Em 'suggestions', adiciona 'suggestion'
+                            }
+                        });
+                    }
+                });
         }
 
-        fetch('../../../JogadoresEAFC.csv') // Faz uma solicitação ao arquivo CSV
-            .then(response => response.text()) // Resposta da solicitação convertida em texto
-            .then(data => {
-                const lines = data.split('\n'); // Cada linha se torna um elemento
-                const playersData = lines.slice(1).map(line => line.split(',')); // Ignora a 1ª linha e mapeia cada linha transformado-a em um array com elementos separados por vírgula
-                const players = playersData.map(player => player[1]).filter(Boolean); // Cria um array chamado 'players' que contém os valores da coluna 2 e remove qualquer valor vazio
-
-                if (inputText === "") { // Se o input estiver vazio...
-                    suggestions.style.display = "none";
-                    suggestions.innerHTML = ""; // Remove qualquer conteúdo do elemento de ID "suggestions"
-                } else { // Se o input NÃO estiver vazio...
-                    suggestions.style.display = "block";
-                    suggestions.innerHTML = ""; // Remove qualquer conteúdo prévio do elemento de ID "suggestions" 
-
-                    players.forEach(player => { // Cria um loop que itera por todos os jogadores
-                        if (player.toLowerCase().includes(inputText.toLowerCase())) { // Verifica se o nome do jogador (em letras minúsculas) contém o texto digitado (em letras minúsculas)
-                            const suggestion = document.createElement('p'); // Cria um elemento <p> para exibir a sugestão do jogador
-                            suggestion.textContent = player; // Define o conteúdo do texto de 'suggestion'
-                            suggestion.addEventListener('click', () => {
-                                input.value = player; // Define que, no click, o valor do input é o 'player'
-                                suggestions.style.display = "none";
-                                displayPlayerInfo(playersData, player);
-                            });
-                            suggestions.appendChild(suggestion); // Em 'suggestions', adiciona 'suggestion'
-                        }
-                    });
-                }
-            });
-    }
 
 
+        // FUNÇÃO QUE EXIBE INFORMAÇÕES DO JOGADOR SELECIONADO
+        function displayPlayerInfo(data, selectedPlayer) {
 
-    // FUNÇÃO QUE EXIBE INFORMAÇÕES DO JOGADOR SELECIONADO
-    function displayPlayerInfo(data, selectedPlayer) {
+            const selectedPlayerData = data.find(player => player[1] === selectedPlayer); //No array 'data', é procurado o primeiro jogador que corresponde ao 'selectedPlayer'. O resultado é armazenado na variável 'selectedPlayerData'
 
-        const selectedPlayerData = data.find(player => player[1] === selectedPlayer); //No array 'data', é procurado o primeiro jogador que corresponde ao 'selectedPlayer'. O resultado é armazenado na variável 'selectedPlayerData'
+            if (selectedPlayerData) { // Verifica se o jogador com o nome selecionado foi encontrado
+                addPlayerToTable(selectedPlayerData); // Chama a função 'addPlayerToTable' e passa 'selectedPlayerData' como argumento
+                input.value = ""; // Esvazia o input depois da seleção do jogador
+                input.style.display = "none"; // Oculta o input depois da seleção do jogador
+                reorderTable(); // Chama a função de reorganizar a tabela
 
-        if (selectedPlayerData) { // Verifica se o jogador com o nome selecionado foi encontrado
-            addPlayerToTable(selectedPlayerData); // Chama a função 'addPlayerToTable' e passa 'selectedPlayerData' como argumento
-            input.value = ""; // Esvazia o input depois da seleção do jogador
-            input.style.display = "none"; // Oculta o input depois da seleção do jogador
-            reorderTable(); // Chama a função de reorganizar a tabela
-
-            salvarDadosLocalStorage();
+                salvarDadosLocalStorage();
+            }
         }
-    }
-});
+    });
 
 
 
@@ -423,7 +481,7 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
         //INSERÇÃO DE LINHA E CÉLULAS À TABELA
         const newRow = elencoBody.insertRow(); // Insere uma nova linha ('<tr>') à tabela
         const cellPosicao = newRow.insertCell(0); // Daqui pra baixo, insere uma nova célula ('<td>') à tabela
-            cellPosicao.classList.add('class-colunaPosiçao');
+        cellPosicao.classList.add('class-colunaPosiçao');
         const cellOVR = newRow.insertCell(1);
         const cellNome = newRow.insertCell(2);
         const cellNacionalidade = newRow.insertCell(3);
@@ -432,9 +490,9 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
         const cellPeso = newRow.insertCell(6);
         const cellValorEstimado = newRow.insertCell(7);
         const cellPace = newRow.insertCell(8);
-            cellPace.classList.add('class-colunaPace');
+        cellPace.classList.add('class-colunaPace');
         const cellClube = newRow.insertCell(9);
-            cellClube.style.display = 'none';
+        cellClube.style.display = 'none';
 
         var clubeInfoElement = document.getElementById('clubeInfo');
         var conteudoClubeInfo = clubeInfoElement.textContent;
@@ -530,38 +588,38 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
     //FUNÇÃO PARA REORDENAR A TABELA COM BASE NAS POSIÇÕES
     function reorderTable() {
         const rows = Array.from(elencoBody.rows);
-    
+
         rows.sort((a, b) => {
             const positionA = a.cells[0].textContent;
             const positionB = b.cells[0].textContent;
-    
+
             const orderA = getPositionOrder(positionA);
             const orderB = getPositionOrder(positionB);
-    
+
             if (orderA !== orderB) {
                 return orderA - orderB;
             } else {
                 const valueA = parseFloat(a.cells[1].textContent);
                 const valueB = parseFloat(b.cells[1].textContent);
-    
+
                 if (valueA !== valueB) {
                     return valueB - valueA;
                 } else {
                     // Se os valores da segunda coluna forem iguais, use a ordem alfabética da terceira coluna
                     const textA = a.cells[2].textContent.toLowerCase();
                     const textB = b.cells[2].textContent.toLowerCase();
-    
+
                     return textA.localeCompare(textB);
                 }
             }
         });
-    
+
         for (const row of rows) {
             elencoBody.appendChild(row);
         }
     }
-    
-    
+
+
 
 
 
@@ -576,7 +634,7 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
     botaoRemover.addEventListener("click", () => {
 
         selecting = !selecting; // Alterna a variável 'selecting' entre V e F
-    
+
         const rows = document.querySelectorAll("#elenco-table tbody tr"); // Seleciona todas as linhas da tabela
 
 
@@ -610,7 +668,7 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
 
     }
 
-    
+
 
     //FUNÇÃO DO MODAL DE CONFIRMAÇÃO DE EXCLUSÃO DE JOGADOR
     function openConfirmationModal(playerName, onConfirm, onCancel, row) {
@@ -623,7 +681,7 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
 
         modal.style.display = "block";
         overlay.style.display = "block";
-        
+
         modalText.textContent = `Tem certeza que deseja remover ${playerName} do elenco?`;
 
 
@@ -633,7 +691,7 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
             modal.style.display = "none";
             overlay.style.display = "none";
             mensagemRemocao.style.display = "none";
-            
+
             const rows = document.querySelectorAll("#elenco-table tbody tr");
 
             rows.forEach(row => {
@@ -650,7 +708,7 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
             modal.style.display = "none";
             overlay.style.display = "none";
             mensagemRemocao.style.display = "none";
-            
+
             const rows = document.querySelectorAll("#elenco-table tbody tr");
             rows.forEach(row => {
                 row.classList.remove("selectable-row");
@@ -666,9 +724,9 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
     // A função do modal de confirmação de exclusão sendo chamado:
     function handleRowClick(event) {
         if (selecting) {
-            
+
             const playerName = event.currentTarget.cells[2].textContent; // Obtém o nome do jogador
-            
+
             openConfirmationModal(playerName, (row) => {
                 row.remove();
                 reorderTable();
@@ -712,7 +770,7 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
             const playerName = event.currentTarget.cells[2].textContent; // Nome do jogador é obtido a partir da linha da tabela selecionada
 
             playerToChangePosition = event.currentTarget; // Salva a referência da linha do jogador a ser alterado
-            
+
             openPositionChangeModal(playerName); // Função do modal de mudança de posição é chamada
         }
     }
@@ -732,7 +790,7 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
 
         modal2.style.display = "block";
         overlay.style.display = "block";
-        
+
 
         confirmButton.addEventListener("click", () => {
 
@@ -752,14 +810,14 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
 
             salvarDadosLocalStorage();
 
-            aplicarFormatacaoCondicional();
+            //aplicarFormatacaoCondicional();
         });
 
 
         cancelButton.addEventListener("click", () => {
 
             playerToChangePosition = null; // Limpa a referência
-            
+
             modal2.style.display = "none";
             overlay.style.display = "none";
             mensagemAlteraçaoPosiçao.style.display = "none";
@@ -779,11 +837,11 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
 
 
 
-//A PARTIR DAQUI, A LÓGICA BÁSICA DA TABELA ESTÁ FEITA. AGORA HAVERÃO AS ALTERAÇÕES DA TABELA DE ACORDO COM AS TEMPORADAS PASSANDO.
-    
+    //A PARTIR DAQUI, A LÓGICA BÁSICA DA TABELA ESTÁ FEITA. AGORA HAVERÃO AS ALTERAÇÕES DA TABELA DE ACORDO COM AS TEMPORADAS PASSANDO.
+
 
     //ANO INICIAL DO UNIVERSO
-    let anoAtual6 = parseInt(localStorage.getItem('anoAtual6')) || 2023;
+    let anoAtual = parseInt(localStorage.getItem('anoAtual')) || 2023;
 
     const temporadaAtual = document.getElementById("id-temporadaAtual"); //Temporada atual
 
@@ -927,7 +985,7 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
 
     // Executa a função para preencher o select ao carregar a página
     escolherJogadorSelect2();
-    
+
 
 
     //DEMAIS JOGADORES SUB-23 DO TIME
@@ -1004,19 +1062,19 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
         const botaoAdicionarJogadorLista = document.getElementById("id-botaoAdicionarJogadorListaPS");
         const listaJogadores1 = document.getElementById("listaJogadoresPS");
         const listaJogadores2 = document.getElementById("listaJogadoresSS");
-    
+
         for (let i = 1; i < linhas.length; i++) {
             const colunaNome = linhas[i].cells[2].textContent; // Obtém o nome da terceira coluna
-    
+
             const optionJogador = document.createElement("option");
             optionJogador.text = colunaNome;
             optionJogador.value = colunaNome;
             select.appendChild(optionJogador);
         }
-    
+
         function adicionarJogador() {
             const jogadorSelecionado = select.value;
-        
+
             if (jogadorSelecionado) {
                 // Verifica se o jogador já está em outra lista
                 if (jogadorEstaNaLista(jogadorSelecionado, listaJogadores1) ||
@@ -1024,28 +1082,28 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
                     // Não exibe erro, apenas retorna sem adicionar o jogador
                     return;
                 }
-        
+
                 // Verifica se a lista já possui 3 jogadores
                 if (listaJogadores1.getElementsByTagName("li").length >= 3) {
                     // Não permite adicionar mais jogadores se a lista atingiu o limite
                     return;
                 }
-        
+
                 // Adiciona o jogador à lista
                 const itemLista = document.createElement("li");
                 itemLista.textContent = jogadorSelecionado;
                 listaJogadores1.appendChild(itemLista);
-        
+
                 // Limpa a seleção do select
                 select.value = "";
             }
         }
-        
-        
-    
+
+
+
         botaoAdicionarJogadorLista.addEventListener("click", adicionarJogador);
     }
-    
+
 
     // Executa a função para preencher o select ao carregar a página
     escolherJogadorSelect4();
@@ -1061,19 +1119,19 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
         const botaoAdicionarJogadorLista = document.getElementById("id-botaoAdicionarJogadorListaSS");
         const listaJogadores1 = document.getElementById("listaJogadoresSS");
         const listaJogadores2 = document.getElementById("listaJogadoresPS");
-    
+
         for (let i = 1; i < linhas.length; i++) {
             const colunaNome = linhas[i].cells[2].textContent; // Obtém o nome da terceira coluna
-    
+
             const optionJogador = document.createElement("option");
             optionJogador.text = colunaNome;
             optionJogador.value = colunaNome;
             select.appendChild(optionJogador);
         }
-    
+
         function adicionarJogador() {
             const jogadorSelecionado = select.value;
-        
+
             if (jogadorSelecionado) {
                 // Verifica se o jogador já está em outra lista
                 if (jogadorEstaNaLista(jogadorSelecionado, listaJogadores1) ||
@@ -1081,26 +1139,26 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
                     // Não exibe erro, apenas retorna sem adicionar o jogador
                     return;
                 }
-        
+
                 // Verifica se a lista já possui 3 jogadores
                 if (listaJogadores1.getElementsByTagName("li").length >= 2) {
                     // Não permite adicionar mais jogadores se a lista atingiu o limite
                     return;
                 }
-        
+
                 // Adiciona o jogador à lista
                 const itemLista = document.createElement("li");
                 itemLista.textContent = jogadorSelecionado;
                 listaJogadores1.appendChild(itemLista);
-        
+
                 // Limpa a seleção do select
                 select.value = "";
             }
         }
-    
+
         botaoAdicionarJogadorLista.addEventListener("click", adicionarJogador);
     }
-    
+
 
     // Executa a função para preencher o select ao carregar a página
     escolherJogadorSelect5();
@@ -1121,7 +1179,7 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
 
         for (let i = 1; i < linhas.length; i++) {
             const colunaNome = linhas[i].cells[2].textContent; // Obtém o nome da terceira coluna
-    
+
             const optionJogador = document.createElement("option");
             optionJogador.text = colunaNome;
             optionJogador.value = colunaNome;
@@ -1142,18 +1200,18 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
                     // Não exibe erro, apenas retorna sem adicionar o jogador
                     return;
                 }
-        
+
                 // Verifica se a lista já possui 3 jogadores
                 if (listaJogadores1.getElementsByTagName("li").length >= 10) {
                     // Não permite adicionar mais jogadores se a lista atingiu o limite
                     return;
                 }
-        
+
                 // Adiciona o jogador à lista
                 const itemLista = document.createElement("li");
                 itemLista.textContent = jogadorSelecionado;
                 listaJogadores1.appendChild(itemLista);
-        
+
                 // Limpa a seleção do select
                 select.value = "";
             }
@@ -1189,11 +1247,11 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
         const listaJogadores3 = document.getElementById("listaJogadoresT2MDA");
         const listaJogadores4 = document.getElementById("listaJogadoresR2MDA");
         const listaJogadores5 = document.getElementById("listaJogadoresTMIMDA");
-        
+
 
         for (let i = 1; i < linhas.length; i++) {
             const colunaNome = linhas[i].cells[2].textContent; // Obtém o nome da terceira coluna
-    
+
             const optionJogador = document.createElement("option");
             optionJogador.text = colunaNome;
             optionJogador.value = colunaNome;
@@ -1214,15 +1272,15 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
                     // Não exibe erro, apenas retorna sem adicionar o jogador
                     return;
                 }
-        
+
                 // Limpa a lista antes de adicionar um novo jogador
                 listaJogadores5.innerHTML = "";
-        
+
                 // Adiciona o jogador à lista
                 const itemLista = document.createElement("li");
                 itemLista.textContent = jogadorSelecionado;
                 listaJogadores5.appendChild(itemLista);
-        
+
                 // Limpa a seleção do select
                 select.value = "";
             }
@@ -1261,7 +1319,7 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
 
         for (let i = 1; i < linhas.length; i++) {
             const colunaNome = linhas[i].cells[2].textContent; // Obtém o nome da terceira coluna
-    
+
             const optionJogador = document.createElement("option");
             optionJogador.text = colunaNome;
             optionJogador.value = colunaNome;
@@ -1282,12 +1340,12 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
                     // Não exibe erro, apenas retorna sem adicionar o jogador
                     return;
                 }
-        
+
                 // Adiciona o jogador à lista
                 const itemLista = document.createElement("li");
                 itemLista.textContent = jogadorSelecionado;
                 listaJogadores1.appendChild(itemLista);
-        
+
                 // Limpa a seleção do select
                 select.value = "";
             }
@@ -1326,7 +1384,7 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
 
         for (let i = 1; i < linhas.length; i++) {
             const colunaNome = linhas[i].cells[2].textContent; // Obtém o nome da terceira coluna
-    
+
             const optionJogador = document.createElement("option");
             optionJogador.text = colunaNome;
             optionJogador.value = colunaNome;
@@ -1347,18 +1405,18 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
                     // Não exibe erro, apenas retorna sem adicionar o jogador
                     return;
                 }
-        
+
                 // Verifica se a lista já possui 3 jogadores
                 if (listaJogadores1.getElementsByTagName("li").length >= 11) {
                     // Não permite adicionar mais jogadores se a lista atingiu o limite
                     return;
                 }
-        
+
                 // Adiciona o jogador à lista
                 const itemLista = document.createElement("li");
                 itemLista.textContent = jogadorSelecionado;
                 listaJogadores1.appendChild(itemLista);
-        
+
                 // Limpa a seleção do select
                 select.value = "";
             }
@@ -1397,7 +1455,7 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
 
         for (let i = 1; i < linhas.length; i++) {
             const colunaNome = linhas[i].cells[2].textContent; // Obtém o nome da terceira coluna
-    
+
             const optionJogador = document.createElement("option");
             optionJogador.text = colunaNome;
             optionJogador.value = colunaNome;
@@ -1418,12 +1476,12 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
                     // Não exibe erro, apenas retorna sem adicionar o jogador
                     return;
                 }
-        
+
                 // Adiciona o jogador à lista
                 const itemLista = document.createElement("li");
                 itemLista.textContent = jogadorSelecionado;
                 listaJogadores1.appendChild(itemLista);
-        
+
                 // Limpa a seleção do select
                 select.value = "";
             }
@@ -1446,15 +1504,15 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
     // Executa a função para preencher o select ao carregar a página
     escolherJogadorSelect10();
 
-    
+
 
 
 
 
     //Atualização da temporada atual:
     botaoFimTemporada.addEventListener("click", () => {
-        anoAtual6++;
-        temporadaAtual.textContent = "Temporada" + " " + anoAtual6 + "/" + (anoAtual6 + 1);
+        anoAtual++;
+        temporadaAtual.textContent = "Temporada" + " " + anoAtual + "/" + (anoAtual + 1);
 
         // Obtenha a tabela e suas linhas
         var tabela = document.getElementById('elenco-table');
@@ -1475,12 +1533,12 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
         }
 
 
-        // Salva o anoAtual6 no localStorage
-        localStorage.setItem('anoAtual6', anoAtual6);
+        // Salva o anoAtual no localStorage
+        localStorage.setItem('anoAtual', anoAtual);
 
         atualizarPace();
-        
-        
+
+
 
         atualizarOVR();
         atualizarOVR2();
@@ -1498,10 +1556,10 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
         atualizarOVR14();
         atualizarOVR15();
         atualizarOVR16();
-        
-        
-        
-        
+
+
+
+
 
 
         modalFinalizaçaoTemporada.style.display = 'none';
@@ -1510,10 +1568,9 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
         // Salve os dados atualizados no localStorage
         salvarDadosLocalStorage();
     })
-    
+
     reorderTable();
-    aplicarFormatacaoCondicional();
-    
+    //aplicarFormatacaoCondicional();
 
 
 
@@ -1524,7 +1581,8 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
 
 
 
-//ATUALIZAÇÃO AUTOMÁTICA DO OVR
+
+    //ATUALIZAÇÃO AUTOMÁTICA DO OVR
     function atualizarOVR() {
         const tabela = document.getElementById("elenco-table");
         const linhas = tabela.getElementsByTagName("tr");
@@ -1535,7 +1593,7 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
             let ovrB = ovrA; // Valor inicial, caso não seja necessário alterar
 
             const posicao = linhas[i].cells[0].textContent.trim(); // Obtém o texto da primeira coluna (posição)
-            
+
             // Lógica de atualização do OVR para goleiros
             if (posicao === "GK") {
                 if (idade <= 26) {
@@ -1551,7 +1609,7 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
                         ovrB = ovrA + 1;
                     } else if (ovrA >= 78) {
                         ovrB = ovrA + 0;
-                    }                    
+                    }
                 } else if (idade >= 33 && idade <= 36) {
                     if (ovrA >= 1 && ovrA <= 98) {
                         ovrB = ovrA + 0;
@@ -1620,84 +1678,84 @@ botaoModalNaoFinalizarTemporada.addEventListener("click", function() {
                 }
             }
 
-            
+
             // Atualiza o valor na tabela
             linhas[i].cells[1].textContent = ovrB;
 
-            
+
         }
 
-        
+
     }
 
-        
-    
 
 
 
 
 
-//ATUALIZAÇÃO AUTOMÁTICA DO PACE
-function atualizarPace() {
-    const tabela = document.getElementById("elenco-table");
-    const linhas = tabela.getElementsByTagName("tr");
 
-    for (let i = 1; i < linhas.length; i++) {
-        const idade = parseInt(linhas[i].cells[4].textContent, 10); // Obtém a idade da quinta coluna
-        let paceOld = parseFloat(linhas[i].cells[8].textContent); // Obtém o valor atual da nona coluna
-        let paceNew = paceOld; // Valor inicial, caso não seja necessário alterar
-        
-        if (idade <= 24) {
-            if (paceOld >= 1 && paceOld <= 77) {
-                paceNew = paceOld + 2;
-            } else if (paceOld >= 78 && paceOld <= 82) {
-                paceNew = paceOld + 1;
+
+    //ATUALIZAÇÃO AUTOMÁTICA DO PACE
+    function atualizarPace() {
+        const tabela = document.getElementById("elenco-table");
+        const linhas = tabela.getElementsByTagName("tr");
+
+        for (let i = 1; i < linhas.length; i++) {
+            const idade = parseInt(linhas[i].cells[4].textContent, 10); // Obtém a idade da quinta coluna
+            let paceOld = parseFloat(linhas[i].cells[8].textContent); // Obtém o valor atual da nona coluna
+            let paceNew = paceOld; // Valor inicial, caso não seja necessário alterar
+
+            if (idade <= 24) {
+                if (paceOld >= 1 && paceOld <= 77) {
+                    paceNew = paceOld + 2;
+                } else if (paceOld >= 78 && paceOld <= 82) {
+                    paceNew = paceOld + 1;
+                }
+            } else if (idade >= 25 && idade <= 27) {
+                if (paceOld >= 1 && paceOld <= 77) {
+                    paceNew = paceOld + 1;
+                }
+            } else if (idade >= 28 && idade <= 32) {
+
+            } else if (idade >= 33 && idade <= 36) {
+                paceNew = paceOld - 1;
+            } else if (idade >= 37 && idade <= 39) {
+                if (paceOld >= 1 && paceOld <= 87) {
+                    paceNew = paceOld - 2;
+                } else if (paceOld >= 88) {
+                    paceNew = paceOld - 3;
+                }
+            } else if (idade >= 40 && idade <= 42) {
+                if (paceOld >= 1 && paceOld <= 82) {
+                    paceNew = paceOld - 3;
+                } else if (paceOld >= 83 && paceOld <= 87) {
+                    paceNew = paceOld - 4;
+                } else if (paceOld >= 88) {
+                    paceNew = paceOld - 5;
+                }
+            } else if (idade >= 43) {
+                if (paceOld >= 1 && paceOld <= 77) {
+                    paceNew = paceOld - 4;
+                } else if (paceOld >= 78 && paceOld <= 82) {
+                    paceNew = paceOld - 5;
+                } else if (paceOld >= 83 && paceOld <= 87) {
+                    paceNew = paceOld - 6;
+                } else if (paceOld >= 88) {
+                    paceNew = paceOld - 7;
+                }
             }
-        } else if (idade >= 25 && idade <= 27) {
-            if (paceOld >= 1 && paceOld <= 77) {
-                paceNew = paceOld + 1;
-            }
-        } else if (idade >= 28 && idade <= 32) {
 
-        } else if (idade >= 33 && idade <= 36) {
-            paceNew = paceOld - 1;
-        } else if (idade >= 37 && idade <= 39) {
-            if (paceOld >= 1 && paceOld <= 87) {
-                paceNew = paceOld - 2;
-            } else if (paceOld >= 88) {
-                paceNew = paceOld - 3;
-            }
-        } else if (idade >= 40 && idade <= 42) {
-            if (paceOld >= 1 && paceOld <= 82) {
-                paceNew = paceOld - 3;
-            } else if (paceOld >= 83 && paceOld <= 87) {
-                paceNew = paceOld - 4;
-            } else if (paceOld >= 88) {
-                paceNew = paceOld - 5;
-            }
-        } else if (idade >= 43) {
-            if (paceOld >= 1 && paceOld <= 77) {
-                paceNew = paceOld - 4;
-            } else if (paceOld >= 78 && paceOld <= 82) {
-                paceNew = paceOld - 5;
-            } else if (paceOld >= 83 && paceOld <= 87) {
-                paceNew = paceOld - 6;
-            } else if (paceOld >= 88) {
-                paceNew = paceOld - 7;
-            }
+
+            // Atualiza o valor na tabela
+            linhas[i].cells[8].textContent = paceNew;
         }
-
-        
-        // Atualiza o valor na tabela
-        linhas[i].cells[8].textContent = paceNew;
     }
-}
 
 
 
 
 
-//JOGADORES SURPREENDENTES SUB-23
+    //JOGADORES SURPREENDENTES SUB-23
     //SUB-23 MAIS SURPREENDENTE
     function atualizarOVR2() {
         const tabela = document.getElementById("elenco-table");
@@ -1744,7 +1802,7 @@ function atualizarPace() {
 
 
 
-    
+
 
 
 
@@ -1812,7 +1870,7 @@ function atualizarPace() {
 
 
 
-//JOGADORES SURPREENDENTES
+    //JOGADORES SURPREENDENTES
     //JOGADORES SURPREENDENTES PRINCIPAIS
     function atualizarOVR5() {
         const tabela = document.getElementById("elenco-table");
@@ -1828,8 +1886,8 @@ function atualizarPace() {
             if (
                 jogadorEstaNaLista(jogadorNome, listaJogadoresPS) &&
                 (jogadorEstaNaLista(jogadorNome, document.getElementById("listaJogadores3SS23")) ||
-                jogadorEstaNaLista(jogadorNome, document.getElementById("listaJogadores2SS23")) ||
-                jogadorEstaNaLista(jogadorNome, document.getElementById("listaJogadores1SS23")))
+                    jogadorEstaNaLista(jogadorNome, document.getElementById("listaJogadores2SS23")) ||
+                    jogadorEstaNaLista(jogadorNome, document.getElementById("listaJogadores1SS23")))
             ) {
                 if (ovrE >= 1 && ovrE <= 54) {
                     ovrF = ovrE + 7;
@@ -1842,7 +1900,7 @@ function atualizarPace() {
                 } else if (ovrE >= 78 && ovrE <= 97) {
                     ovrF = ovrE + 0;
                 }
-                
+
                 // Se ovrE for 78 ou mais, ovrF permanece igual a ovrE (acréscimo de 0)
             }
 
@@ -1883,8 +1941,8 @@ function atualizarPace() {
             if (
                 jogadorEstaNaLista(jogadorNome, listaJogadoresPS) &&
                 (jogadorEstaNaLista(jogadorNome, document.getElementById("listaJogadores3SS23")) ||
-                jogadorEstaNaLista(jogadorNome, document.getElementById("listaJogadores2SS23")) ||
-                jogadorEstaNaLista(jogadorNome, document.getElementById("listaJogadores1SS23")))
+                    jogadorEstaNaLista(jogadorNome, document.getElementById("listaJogadores2SS23")) ||
+                    jogadorEstaNaLista(jogadorNome, document.getElementById("listaJogadores1SS23")))
             ) {
                 if (ovrF >= 1 && ovrF <= 54) {
                     ovrG = ovrF + 4;
@@ -1897,7 +1955,7 @@ function atualizarPace() {
                 } else if (ovrF >= 78 && ovrF <= 97) {
                     ovrG = ovrF + 0;
                 }
-                
+
                 // Se ovrF for 78 ou mais, ovrG permanece igual a ovrF (acréscimo de 0)
             }
 
@@ -2092,7 +2150,7 @@ function atualizarPace() {
 
 
 
-//CLAUSURA (DEFESA) A PARTIR DAQUI:
+    //CLAUSURA (DEFESA) A PARTIR DAQUI:
 
 
 
@@ -2237,14 +2295,14 @@ function atualizarPace() {
         const tabela = document.getElementById("elenco-table");
         const linhas = tabela.getElementsByTagName("tr");
         const listaJogadoresR2MDA = document.getElementById("listaJogadoresR2MDA");
-    
+
         const valoresFinaisOVR = [];
-    
+
         for (let i = 1; i < linhas.length; i++) {
             const jogadorNome = linhas[i].cells[2].textContent;
             let ovrJ = parseFloat(linhas[i].cells[1].textContent);
             let ovrK = ovrJ;
-    
+
             if (jogadorEstaNaLista(jogadorNome, listaJogadoresR2MDA)) {
                 // Lógica para atualizar ovrK
                 if (ovrJ >= 1 && ovrJ <= 69) {
@@ -2260,23 +2318,19 @@ function atualizarPace() {
                 }
                 // Se ovrJ for 76 ou mais, ovrK permanece igual a ovrJ (acréscimo de 0)
             }
-    
+
             linhas[i].cells[1].textContent = ovrK;
-    
-            
+
+
         }
-    
-        
+
+
     }
-    
-
-
-
-//VALOR ESTIMADO ATUALIZADO A PARTIR DAQUI:
 
 
 
 
+    //VALOR ESTIMADO ATUALIZADO A PARTIR DAQUI:
 
 
 
@@ -2304,17 +2358,21 @@ function atualizarPace() {
 
 
 
-    
 
 
 
 
-    
 
 
 
 
-    
+
+
+
+
+
+
+
 
 
 
