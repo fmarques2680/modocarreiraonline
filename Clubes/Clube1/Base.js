@@ -38,58 +38,26 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         const options = {
             method: 'PUT',
-            headers: {'Content-Type': 'application/json', 'User-Agent': 'insomnia/8.4.5'},
+            headers: { 'Content-Type': 'application/json', 'User-Agent': 'insomnia/8.4.5' },
             body: JSON.stringify(objeto)
-          };
-          
-          fetch('http://localhost:3000/', options)
-            .then(response => response.json())
-            .then(response => console.log(response))
-            .catch(err => console.error(err));
-    }
+        };
 
-    function carregarDados () {
-        const options = {method: 'GET', headers: {'User-Agent': 'insomnia/8.4.5'}};
-
-        fetch('http://localhost:3000/', options)
+        fetch('https://backendmco.vercel.app/api', options)
         .then(response => response.json())
         .then(response => {
-            const objeto = response
-            localStorage.setItem('dadosTabela', JSON.stringify(objeto.dadosTabela));
-            localStorage.setItem('dadosTabela2', JSON.stringify(objeto.dadosTabela2));
-            localStorage.setItem('dadosTabela3', JSON.stringify(objeto.dadosTabela3));
-            localStorage.setItem('dadosTabela4', JSON.stringify(objeto.dadosTabela4));
-            localStorage.setItem('dadosTabela5', JSON.stringify(objeto.dadosTabela5));
-            localStorage.setItem('dadosTabela6', JSON.stringify(objeto.dadosTabela6));
-            localStorage.setItem('dadosTabela7', JSON.stringify(objeto.dadosTabela7));
-            localStorage.setItem('dadosTabela8', JSON.stringify(objeto.dadosTabela8));
-            localStorage.setItem('dadosTabela9', JSON.stringify(objeto.dadosTabela9));
-            localStorage.setItem('dadosTabela10', JSON.stringify(objeto.dadosTabela10));
-            localStorage.setItem('dadosTabela11', JSON.stringify(objeto.dadosTabela11));
-            localStorage.setItem('anoAtual', JSON.stringify(objeto.anoAtual));
-            localStorage.setItem('anoAtual2', JSON.stringify(objeto.anoAtual2));
-            localStorage.setItem('anoAtual3', JSON.stringify(objeto.anoAtual3));
-            localStorage.setItem('anoAtual4', JSON.stringify(objeto.anoAtual4));
-            localStorage.setItem('anoAtual5', JSON.stringify(objeto.anoAtual5));
-            localStorage.setItem('anoAtual6', JSON.stringify(objeto.anoAtual6));
-            localStorage.setItem('anoAtual7', JSON.stringify(objeto.anoAtual7));
-            localStorage.setItem('anoAtual8', JSON.stringify(objeto.anoAtual8));
-            localStorage.setItem('anoAtual9', JSON.stringify(objeto.anoAtual9));
-            localStorage.setItem('anoAtual10', JSON.stringify(objeto.anoAtual10));
-            localStorage.setItem('anoAtual11', JSON.stringify(objeto.anoAtual11));
-            localStorage.setItem('clubeSelecionado1', JSON.stringify(objeto.clubeSelecionado1));
-            localStorage.setItem('clubeSelecionado2', JSON.stringify(objeto.clubeSelecionado2));
-            localStorage.setItem('clubeSelecionado3', JSON.stringify(objeto.clubeSelecionado3));
-            localStorage.setItem('clubeSelecionado4', JSON.stringify(objeto.clubeSelecionado4));
-            localStorage.setItem('clubeSelecionado5', JSON.stringify(objeto.clubeSelecionado5));
-            localStorage.setItem('clubeSelecionado6', JSON.stringify(objeto.clubeSelecionado6));
-            localStorage.setItem('clubeSelecionado7', JSON.stringify(objeto.clubeSelecionado7));
-            localStorage.setItem('clubeSelecionado8', JSON.stringify(objeto.clubeSelecionado8));
-            localStorage.setItem('clubeSelecionado9', JSON.stringify(objeto.clubeSelecionado9));
-            localStorage.setItem('clubeSelecionado10', JSON.stringify(objeto.clubeSelecionado10));
-            localStorage.setItem('clubeSelecionado11', JSON.stringify(objeto.clubeSelecionado11));
+            const objeto = response;
+            const options = {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json', 'User-Agent': 'insomnia/8.4.5' },
+                body: JSON.stringify(objeto)
+            };
+    
+            return fetch('https://backendmco.vercel.app/api', options);
         })
-        .catch(err => console.error(err));
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Erro:', error));
+    
     }
 
 
@@ -189,6 +157,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Armazenar de volta no localStorage
         localStorage.setItem('dadosTabela', JSON.stringify(dadosTabela));
+
+    });
+
+
+    const finalizar = document.getElementById("finalizar")
+
+    finalizar.addEventListener("click", function () {
+        salvarDados();
     });
 
 
