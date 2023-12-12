@@ -49,7 +49,7 @@
             <p id="id-temporadaAtual">Temporada</p>
         </div>
 
-        <button id="salvarPagina">Salvar</button>
+       
 
         <!--TABELA DE ELENCO-->
         <table id="elenco-table">
@@ -71,6 +71,19 @@
                 <!-- As linhas dos jogadores serão adicionadas aqui -->
             </tbody>
         </table>
+
+
+        <button id="botaoModalSalvar" class="salvamento">Salvar alterações</button>
+        <div id="div-confirmarSalvamento" style="display: none;">
+            <p class="tituloSimNaoSalvar">Tem certeza que deseja salvar as alterações feitas?</p>
+            <div class="divSimNaoSalvar">
+                <button id="salvarPagina" class="salvamento-c">Sim</button>
+                <button id="naoSalvarPagina" class="salvamento-c">Não</button>
+            </div>
+        </div>
+        <p id="alteraçoesSalvas" class="tituloSimNaoSalvar" style="display: none;">Alterações salvas</p>
+
+        
         <div class="class-alteraçoesElenco">
 
             <p>Alterações no elenco:</p>

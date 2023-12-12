@@ -1,5 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    const botaoModalSalvamento = document.getElementById("botaoModalSalvar");
+    const modalSalvamento = document.getElementById("div-confirmarSalvamento");
+    const cancelarSalvamento = document.getElementById("naoSalvarPagina");
+
+    botaoModalSalvamento.addEventListener("click", function () {
+        modalSalvamento.style.display = 'block';
+    });
+
+    cancelarSalvamento.addEventListener("click", function () {
+        modalSalvamento.style.display = 'none';
+    });
+
+
     // // Exemplo de requisição GET
     // fetch('https://backendmco.vercel.app/api', {
     //     method: 'GET',
@@ -148,10 +161,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     const botaoSalvarPagina = document.getElementById("salvarPagina")
+    const mensagemAlteraçoesSalvas = document.getElementById("alteraçoesSalvas")
 
     botaoSalvarPagina.addEventListener("click", function() {
         salvarDados();
+        modalSalvamento.style.display = 'none';
+        mensagemAlteraçoesSalvas.style.display = 'block';
     })
+
+    // Adiciona um evento de clique ao documento
+    document.addEventListener("click", function(event) {
+        // Verifica se o elemento clicado não é o próprio botão ou está contido dentro dele
+        if (event.target !== botaoSalvarPagina && !botaoSalvarPagina.contains(event.target)) {
+            // Oculta a mensagem de alterações salvas
+            mensagemAlteraçoesSalvas.style.display = 'none';
+        }
+    });
 
 
 

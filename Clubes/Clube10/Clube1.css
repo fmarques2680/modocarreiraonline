@@ -829,3 +829,48 @@ main {
         opacity: 1;
         transition: opacity 2s ease-in-out;
     }
+
+
+
+/*SALVAMENTO DE ALTERAÇÕES*/
+.salvamento {
+    background-color: rgb(243, 208, 9);
+    width: 10vw;
+    border-radius: 0.3vw;
+    border: 0;
+    margin-top: 2vw;
+
+    font-size: 1.3vw;
+    font-family: 'Oswald', sans-serif;
+
+    cursor: pointer;
+}
+    .salvamento:hover {
+        background-color: rgb(234, 234, 0);
+    }
+
+.salvamento-c {
+    background-color: rgb(199, 199, 199);
+    width: 10vw;
+    border-radius: 0.3vw;
+    border: 0;
+
+    font-size: 1.2vw;
+    font-family: 'Oswald', sans-serif;
+
+    cursor: pointer;
+}
+    .salvamento-c:hover {
+        background-color: rgb(163, 163, 163);
+    }
+
+.divSimNaoSalvar {
+    display: flex;
+
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.tituloSimNaoSalvar {
+    font-size: 1.3vw;
+}
