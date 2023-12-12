@@ -104,6 +104,7 @@ main {
 
         #id-botaoEmBreve {
             font-style: italic;
+            cursor: not-allowed;
         }
 
 

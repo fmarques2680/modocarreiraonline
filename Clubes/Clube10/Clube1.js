@@ -359,9 +359,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     modalFinalizaçaoTemporada.style.display = 'block';
 
-    botaoAbrirModalFinalizaçaoTemporada.addEventListener("click", function () {
-        modalFinalizaçaoTemporada.classList.add("visible");
-    });
+    // botaoAbrirModalFinalizaçaoTemporada.addEventListener("click", function () {
+    //     modalFinalizaçaoTemporada.classList.add("visible");
+    // });
 
 
 

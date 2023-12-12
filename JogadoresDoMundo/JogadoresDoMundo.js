@@ -166,6 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
     }
+    
 
 
 
@@ -584,6 +585,34 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
+    function verificarClubeLigaBangu() {
+        // Recupera os dados do localStorage
+        var dadosArmazenados = localStorage.getItem('dadosTabela');
+    
+        if (dadosArmazenados) {
+            // Converte os dados de volta para um array
+            var dados = JSON.parse(dadosArmazenados);
+    
+            // Obtém o elemento com id "id-clube"
+            var clubeElement = document.getElementById('id-clube');
+    
+            // Se o elemento existe
+            if (clubeElement) {
+                // Obtém o conteúdo textual do elemento
+                var conteudoAtual = clubeElement.textContent.trim();
+    
+                // Verifica se o conteúdo atual existe no décimo elemento de algum item do array
+                var encontrado = dados.some(function (item) {
+                    return item[9] === conteudoAtual;
+                });
+    
+                // Se o conteúdo atual for encontrado, atualiza para "-"
+                if (encontrado) {
+                    clubeElement.textContent = "-";
+                }
+            }
+        }
+    }
     function atualizarClubeDoJogador2() {
         // Recupera os dados do localStorage
         var dadosArmazenados = localStorage.getItem('dadosTabela2');
@@ -614,6 +643,34 @@ document.addEventListener("DOMContentLoaded", function () {
                         // Atualiza o conteúdo de texto com a posição do jogador
                         clubeElement.textContent = jogador[9];
                     }
+                }
+            }
+        }
+    }
+    function verificarClubeLigaBangu2() {
+        // Recupera os dados do localStorage
+        var dadosArmazenados = localStorage.getItem('dadosTabela2');
+    
+        if (dadosArmazenados) {
+            // Converte os dados de volta para um array
+            var dados = JSON.parse(dadosArmazenados);
+    
+            // Obtém o elemento com id "id-clube"
+            var clubeElement = document.getElementById('id-clube');
+    
+            // Se o elemento existe
+            if (clubeElement) {
+                // Obtém o conteúdo textual do elemento
+                var conteudoAtual = clubeElement.textContent.trim();
+    
+                // Verifica se o conteúdo atual existe no décimo elemento de algum item do array
+                var encontrado = dados.some(function (item) {
+                    return item[9] === conteudoAtual;
+                });
+    
+                // Se o conteúdo atual for encontrado, atualiza para "-"
+                if (encontrado) {
+                    clubeElement.textContent = "-";
                 }
             }
         }
@@ -652,6 +709,34 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
+    function verificarClubeLigaBangu3() {
+        // Recupera os dados do localStorage
+        var dadosArmazenados = localStorage.getItem('dadosTabela3');
+    
+        if (dadosArmazenados) {
+            // Converte os dados de volta para um array
+            var dados = JSON.parse(dadosArmazenados);
+    
+            // Obtém o elemento com id "id-clube"
+            var clubeElement = document.getElementById('id-clube');
+    
+            // Se o elemento existe
+            if (clubeElement) {
+                // Obtém o conteúdo textual do elemento
+                var conteudoAtual = clubeElement.textContent.trim();
+    
+                // Verifica se o conteúdo atual existe no décimo elemento de algum item do array
+                var encontrado = dados.some(function (item) {
+                    return item[9] === conteudoAtual;
+                });
+    
+                // Se o conteúdo atual for encontrado, atualiza para "-"
+                if (encontrado) {
+                    clubeElement.textContent = "-";
+                }
+            }
+        }
+    }
     function atualizarClubeDoJogador4() {
         // Recupera os dados do localStorage
         var dadosArmazenados = localStorage.getItem('dadosTabela4');
@@ -682,6 +767,34 @@ document.addEventListener("DOMContentLoaded", function () {
                         // Atualiza o conteúdo de texto com a posição do jogador
                         clubeElement.textContent = jogador[9];
                     }
+                }
+            }
+        }
+    }
+    function verificarClubeLigaBangu4() {
+        // Recupera os dados do localStorage
+        var dadosArmazenados = localStorage.getItem('dadosTabela4');
+    
+        if (dadosArmazenados) {
+            // Converte os dados de volta para um array
+            var dados = JSON.parse(dadosArmazenados);
+    
+            // Obtém o elemento com id "id-clube"
+            var clubeElement = document.getElementById('id-clube');
+    
+            // Se o elemento existe
+            if (clubeElement) {
+                // Obtém o conteúdo textual do elemento
+                var conteudoAtual = clubeElement.textContent.trim();
+    
+                // Verifica se o conteúdo atual existe no décimo elemento de algum item do array
+                var encontrado = dados.some(function (item) {
+                    return item[9] === conteudoAtual;
+                });
+    
+                // Se o conteúdo atual for encontrado, atualiza para "-"
+                if (encontrado) {
+                    clubeElement.textContent = "-";
                 }
             }
         }
@@ -720,6 +833,34 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
+    function verificarClubeLigaBangu5() {
+        // Recupera os dados do localStorage
+        var dadosArmazenados = localStorage.getItem('dadosTabela5');
+    
+        if (dadosArmazenados) {
+            // Converte os dados de volta para um array
+            var dados = JSON.parse(dadosArmazenados);
+    
+            // Obtém o elemento com id "id-clube"
+            var clubeElement = document.getElementById('id-clube');
+    
+            // Se o elemento existe
+            if (clubeElement) {
+                // Obtém o conteúdo textual do elemento
+                var conteudoAtual = clubeElement.textContent.trim();
+    
+                // Verifica se o conteúdo atual existe no décimo elemento de algum item do array
+                var encontrado = dados.some(function (item) {
+                    return item[9] === conteudoAtual;
+                });
+    
+                // Se o conteúdo atual for encontrado, atualiza para "-"
+                if (encontrado) {
+                    clubeElement.textContent = "-";
+                }
+            }
+        }
+    }
     function atualizarClubeDoJogador6() {
         // Recupera os dados do localStorage
         var dadosArmazenados = localStorage.getItem('dadosTabela6');
@@ -750,6 +891,34 @@ document.addEventListener("DOMContentLoaded", function () {
                         // Atualiza o conteúdo de texto com a posição do jogador
                         clubeElement.textContent = jogador[9];
                     }
+                }
+            }
+        }
+    }
+    function verificarClubeLigaBangu6() {
+        // Recupera os dados do localStorage
+        var dadosArmazenados = localStorage.getItem('dadosTabela6');
+    
+        if (dadosArmazenados) {
+            // Converte os dados de volta para um array
+            var dados = JSON.parse(dadosArmazenados);
+    
+            // Obtém o elemento com id "id-clube"
+            var clubeElement = document.getElementById('id-clube');
+    
+            // Se o elemento existe
+            if (clubeElement) {
+                // Obtém o conteúdo textual do elemento
+                var conteudoAtual = clubeElement.textContent.trim();
+    
+                // Verifica se o conteúdo atual existe no décimo elemento de algum item do array
+                var encontrado = dados.some(function (item) {
+                    return item[9] === conteudoAtual;
+                });
+    
+                // Se o conteúdo atual for encontrado, atualiza para "-"
+                if (encontrado) {
+                    clubeElement.textContent = "-";
                 }
             }
         }
@@ -788,6 +957,34 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
+    function verificarClubeLigaBangu7() {
+        // Recupera os dados do localStorage
+        var dadosArmazenados = localStorage.getItem('dadosTabela7');
+    
+        if (dadosArmazenados) {
+            // Converte os dados de volta para um array
+            var dados = JSON.parse(dadosArmazenados);
+    
+            // Obtém o elemento com id "id-clube"
+            var clubeElement = document.getElementById('id-clube');
+    
+            // Se o elemento existe
+            if (clubeElement) {
+                // Obtém o conteúdo textual do elemento
+                var conteudoAtual = clubeElement.textContent.trim();
+    
+                // Verifica se o conteúdo atual existe no décimo elemento de algum item do array
+                var encontrado = dados.some(function (item) {
+                    return item[9] === conteudoAtual;
+                });
+    
+                // Se o conteúdo atual for encontrado, atualiza para "-"
+                if (encontrado) {
+                    clubeElement.textContent = "-";
+                }
+            }
+        }
+    }
     function atualizarClubeDoJogador8() {
         // Recupera os dados do localStorage
         var dadosArmazenados = localStorage.getItem('dadosTabela8');
@@ -818,6 +1015,34 @@ document.addEventListener("DOMContentLoaded", function () {
                         // Atualiza o conteúdo de texto com a posição do jogador
                         clubeElement.textContent = jogador[9];
                     }
+                }
+            }
+        }
+    }
+    function verificarClubeLigaBangu8() {
+        // Recupera os dados do localStorage
+        var dadosArmazenados = localStorage.getItem('dadosTabela8');
+    
+        if (dadosArmazenados) {
+            // Converte os dados de volta para um array
+            var dados = JSON.parse(dadosArmazenados);
+    
+            // Obtém o elemento com id "id-clube"
+            var clubeElement = document.getElementById('id-clube');
+    
+            // Se o elemento existe
+            if (clubeElement) {
+                // Obtém o conteúdo textual do elemento
+                var conteudoAtual = clubeElement.textContent.trim();
+    
+                // Verifica se o conteúdo atual existe no décimo elemento de algum item do array
+                var encontrado = dados.some(function (item) {
+                    return item[9] === conteudoAtual;
+                });
+    
+                // Se o conteúdo atual for encontrado, atualiza para "-"
+                if (encontrado) {
+                    clubeElement.textContent = "-";
                 }
             }
         }
@@ -856,6 +1081,34 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
+    function verificarClubeLigaBangu9() {
+        // Recupera os dados do localStorage
+        var dadosArmazenados = localStorage.getItem('dadosTabela9');
+    
+        if (dadosArmazenados) {
+            // Converte os dados de volta para um array
+            var dados = JSON.parse(dadosArmazenados);
+    
+            // Obtém o elemento com id "id-clube"
+            var clubeElement = document.getElementById('id-clube');
+    
+            // Se o elemento existe
+            if (clubeElement) {
+                // Obtém o conteúdo textual do elemento
+                var conteudoAtual = clubeElement.textContent.trim();
+    
+                // Verifica se o conteúdo atual existe no décimo elemento de algum item do array
+                var encontrado = dados.some(function (item) {
+                    return item[9] === conteudoAtual;
+                });
+    
+                // Se o conteúdo atual for encontrado, atualiza para "-"
+                if (encontrado) {
+                    clubeElement.textContent = "-";
+                }
+            }
+        }
+    }
     function atualizarClubeDoJogador10() {
         // Recupera os dados do localStorage
         var dadosArmazenados = localStorage.getItem('dadosTabela10');
@@ -890,6 +1143,34 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
+    function verificarClubeLigaBangu10() {
+        // Recupera os dados do localStorage
+        var dadosArmazenados = localStorage.getItem('dadosTabela10');
+    
+        if (dadosArmazenados) {
+            // Converte os dados de volta para um array
+            var dados = JSON.parse(dadosArmazenados);
+    
+            // Obtém o elemento com id "id-clube"
+            var clubeElement = document.getElementById('id-clube');
+    
+            // Se o elemento existe
+            if (clubeElement) {
+                // Obtém o conteúdo textual do elemento
+                var conteudoAtual = clubeElement.textContent.trim();
+    
+                // Verifica se o conteúdo atual existe no décimo elemento de algum item do array
+                var encontrado = dados.some(function (item) {
+                    return item[9] === conteudoAtual;
+                });
+    
+                // Se o conteúdo atual for encontrado, atualiza para "-"
+                if (encontrado) {
+                    clubeElement.textContent = "-";
+                }
+            }
+        }
+    }
     function atualizarClubeDoJogador11() {
         // Recupera os dados do localStorage
         var dadosArmazenados = localStorage.getItem('dadosTabela11');
@@ -920,6 +1201,34 @@ document.addEventListener("DOMContentLoaded", function () {
                         // Atualiza o conteúdo de texto com a posição do jogador
                         clubeElement.textContent = jogador[9];
                     }
+                }
+            }
+        }
+    }
+    function verificarClubeLigaBangu11() {
+        // Recupera os dados do localStorage
+        var dadosArmazenados = localStorage.getItem('dadosTabela11');
+    
+        if (dadosArmazenados) {
+            // Converte os dados de volta para um array
+            var dados = JSON.parse(dadosArmazenados);
+    
+            // Obtém o elemento com id "id-clube"
+            var clubeElement = document.getElementById('id-clube');
+    
+            // Se o elemento existe
+            if (clubeElement) {
+                // Obtém o conteúdo textual do elemento
+                var conteudoAtual = clubeElement.textContent.trim();
+    
+                // Verifica se o conteúdo atual existe no décimo elemento de algum item do array
+                var encontrado = dados.some(function (item) {
+                    return item[9] === conteudoAtual;
+                });
+    
+                // Se o conteúdo atual for encontrado, atualiza para "-"
+                if (encontrado) {
+                    clubeElement.textContent = "-";
                 }
             }
         }
@@ -2119,6 +2428,18 @@ document.addEventListener("DOMContentLoaded", function () {
             atualizarPosicaoDoJogador9();
             atualizarPosicaoDoJogador10();
             atualizarPosicaoDoJogador11();
+
+            verificarClubeLigaBangu();
+            verificarClubeLigaBangu2();
+            verificarClubeLigaBangu3();
+            verificarClubeLigaBangu4();
+            verificarClubeLigaBangu5();
+            verificarClubeLigaBangu6();
+            verificarClubeLigaBangu7();
+            verificarClubeLigaBangu8();
+            verificarClubeLigaBangu9();
+            verificarClubeLigaBangu10();
+            verificarClubeLigaBangu11();
 
             atualizarClubeDoJogador();
             atualizarClubeDoJogador2();
