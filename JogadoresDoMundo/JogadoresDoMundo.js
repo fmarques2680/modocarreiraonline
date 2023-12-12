@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Fazer uma solicitação para o arquivo JogadoresEAFC.csv (seguindo as políticas de segurança do seu servidor)
-        fetch('../../JogadoresEAFC.csv')
+        fetch('../JogadoresEAFC.csv')
             .then(response => response.text())
             .then(data => {
                 const lines = data.split('\n'); // Dividir o arquivo em linhas
