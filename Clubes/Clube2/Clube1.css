@@ -780,7 +780,7 @@ main {
     font-family: 'Oswald', sans-serif;
     font-size: 1.5vw;
 
-    cursor: pointer;
+    cursor: not-allowed;
 }
     #id-botaoAbrirModalFinalizarTemporada:hover {
         background: linear-gradient(to right, #2574b1, #53adf2);
