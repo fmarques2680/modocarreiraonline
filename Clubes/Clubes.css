@@ -282,3 +282,82 @@ main {
 
     align-items: center;
 }
+
+
+
+#id-linkClubeA {
+    width: 9vw;
+
+    padding: 0.5vw;
+    padding-left: 1.2vw;
+
+    cursor: pointer;
+}
+#id-linkClubeB {
+    width: 7.8vw;
+
+    padding: 0.5vw;
+    padding-left: 1.4vw;
+
+    cursor: pointer;
+}
+#id-linkClubeC {
+    width: 9vw;
+
+    padding: 0.5vw;
+
+    cursor: pointer;
+}
+#id-linkClubeD {
+    width: 8vw;
+
+    padding: 0.5vw;
+
+    cursor: pointer;
+}
+#id-linkClubeE {
+    width: 10vw;
+
+    padding: 0.5vw;
+
+    cursor: pointer;
+}
+#id-linkClubeF {
+    width: 9.8vw;
+
+    padding: 0.5vw;
+
+    cursor: pointer;
+}
+#id-linkClubeG {
+    width: 8.2vw;
+
+    padding: 0.5vw;
+    padding-left: 1vw;
+
+    cursor: pointer;
+}
+#id-linkClubeH {
+    width: 7.5vw;
+
+    padding: 0.5vw;
+    padding-left: 0.7vw;
+
+    cursor: pointer;
+}
+#id-linkClubeJ {
+    width: 8vw;
+
+    padding: 0.5vw;
+    padding-top: 1.8vw;
+
+    cursor: pointer;
+}
+#id-linkClubeK {
+    width: 9.2vw;
+
+    padding: 0.5vw;
+    padding-top: 1.3vw;
+
+    cursor: pointer;
+}
