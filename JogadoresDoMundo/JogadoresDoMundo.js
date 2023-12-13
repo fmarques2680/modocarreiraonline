@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     botaoClubes.addEventListener("click", function () {
-        var url = "https://fmarques2680.github.io/modocarreiraonline/Clubes/Clubes.html";
+        var url = "https://modocarreiraonline.github.io/alpha/Clubes/Clubes.html";
         window.location.href = url;
     })
 })
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     botaoClubes.addEventListener("click", function () {
-        var url = "https://fmarques2680.github.io/modocarreiraonline/JogadoresDoMundo/JogadoresDoMundo.html";
+        var url = "https://modocarreiraonline.github.io/alpha/JogadoresDoMundo/JogadoresDoMundo.html";
         window.location.href = url;
     })
 })
