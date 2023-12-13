@@ -425,8 +425,8 @@ main {
 #instrucao-mudança-posiçao {
     background: radial-gradient(circle at center, #318ED5, #3d5fbc);
 
-    position: absolute;
-    top: 10vw;
+    position: fixed;
+    top: 1vw;
 
     padding: 1vw;
     border-radius: 1vw;
@@ -442,8 +442,8 @@ main {
 #instrucao-remocao {
     background: radial-gradient(circle at center, #318ED5, #3d5fbc);
 
-    position: absolute;
-    top: 10vw;
+    position: fixed;
+    top: 1vw;
 
     padding: 1vw;
     border-radius: 1vw;
