@@ -409,7 +409,7 @@ finalizarTudo.addEventListener("click", function () {
             return;
         }
     
-        fetch('../../../JogadoresEAFC.csv')
+        fetch('../../JogadoresEAFC.csv')
             .then(response => response.text())
             .then(data => {
                 const lines = data.split('\n');
