@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const botaoJogadoresMundo = document.getElementById("id-botaoJogadoresMundo");
 
     botaoJogadoresMundo.addEventListener("click", function () {
-        var url = "https://fmarques2680.github.io/modocarreiraonline/JogadoresDoMundo/JogadoresDoMundo.html";
+        var url = "https://modocarreiraonline.github.io/alpha/JogadoresDoMundo/JogadoresDoMundo.html";
         window.location.href = url;
     });
 
