@@ -6,8 +6,11 @@
 
 /*BODY*/
 body {
+    background: linear-gradient(to right, white, #868382);
     width: 100vw;
     margin: 0;
+
+    align-items: center;
 
     font-family: 'Oswald', sans-serif;
 }
@@ -70,3 +73,17 @@ header {
         #id-botaoEmBreve {
             font-style: italic;
         }
+
+
+
+#id-divArteMCO {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#id-arteMCO {
+    position: absolute;
+    top: 2vw;
+    width: 40vw;
+}

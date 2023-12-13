@@ -196,7 +196,7 @@ header {
             display: flex;
             flex-direction: row;
 
-            background: linear-gradient(#5FFF33, #166600);
+            background: linear-gradient(to top, #1a3c99, #318ED5);
             color: white;
 
             margin-bottom: 1.5vw;

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Adicionar um ouvinte de evento para o clique no botão
     botaoEntrarEmUmUniverso.addEventListener("click", function() {
-        var url = "https://modocarreiraonline.github.io/alpha/MCO/MCO.html";
+        var url = "https://modocarreiraonline.github.io/alpha/Clubes/Clubes.html";
         window.location.href = url;
     });
 });
